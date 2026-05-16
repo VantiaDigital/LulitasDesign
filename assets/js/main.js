@@ -77,6 +77,18 @@
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
+  // ---------- Vantia link: forzar apertura en nueva pestaña ----------
+  // Algunos entornos sandbox bloquean target=_blank; este fallback
+  // garantiza que el credit del footer siempre vaya a vantia.digital.
+  document.querySelectorAll('a.vantia-link').forEach(link => {
+    link.addEventListener('click', e => {
+      e.preventDefault();
+      const url = link.href;
+      const opened = window.open(url, '_blank', 'noopener,noreferrer');
+      if (!opened) window.location.href = url; // fallback si popups bloqueados
+    });
+  });
+
   // ---------- Active nav link según página actual ----------
   // body[data-page="servicios"] → marca <a href="...servicios.html">
   const page = document.body.dataset.page;
