@@ -26,8 +26,13 @@ WhatsApp / email / Instagram, porque cada pieza es a medida.
 
 ```
 lulitas-web/
-├── index.html                ← home única con todas las secciones
-├── pages/                    ← (reservado para subpáginas futuras)
+├── index.html                ← portada (hero + índice del cuaderno)
+├── pages/
+│   ├── servicios.html        ← qué hago
+│   ├── proceso.html          ← cómo trabajo
+│   ├── portfolio.html        ← cuaderno (portfolio)
+│   ├── sobre.html            ← quién soy (carta a mano)
+│   └── contacto.html         ← escribime (email/IG/Linktree)
 ├── _headers                  ← cabeceras Cloudflare Pages
 ├── _redirects                ← redirecciones
 ├── robots.txt
@@ -35,13 +40,18 @@ lulitas-web/
 └── assets/
     ├── css/
     │   ├── main.css          ← paleta + layout (variables en :root)
-    │   └── animations.css    ← reveals, parallax, micro-interacciones
+    │   └── animations.css    ← reveals + micro-interacciones
     ├── js/
-    │   ├── main.js           ← nav, drawer, smooth-scroll, cursor
-    │   └── animations.js     ← IntersectionObserver, count-up, parallax
+    │   ├── main.js           ← nav, drawer, active-link por pathname
+    │   └── animations.js     ← IntersectionObserver + count-up
     └── images/
         └── favicon.svg
 ```
+
+Cada página es **standalone**: tiene su propio nav, footer y `<head>` —
+no hay templating ni build. Para cambiar el nav/footer hay que editarlo
+en todas las páginas (5 subpáginas + `index.html`). Es a propósito
+para no introducir un build step.
 
 ---
 
@@ -77,14 +87,18 @@ Tomado del logo y del feed de Instagram (@lulitas.designs).
 - `assets/css/main.css` — bloque `:root`.
 
 ### Agregar / editar servicios
-- `index.html` — sección `<section class="services">`. Cada `.service-card`
-  es un servicio. Para destacar uno, agregar la clase `service-card-feature`
-  y opcionalmente el `<span class="service-flag">Más pedido</span>`.
+- `pages/servicios.html` — bloque `.tags-wall`. Cada `.tag-card` es un
+  servicio. Para destacar uno, agregar `<span class="badge-mini">más pedido</span>`.
 
 ### Agregar piezas al portfolio
-- `index.html` — sección `<section class="portfolio">`. Cada `.pf-card` es
-  una pieza. Para imágenes reales, reemplazar el `.pf-mock-*` por un
-  `<img src="assets/images/...">` dentro de `.pf-art`.
+- `pages/portfolio.html` — bloque `.board`. Cada `.polaroid` es una pieza.
+  Para imágenes reales, reemplazar el `.art-*` por un
+  `<img src="../assets/images/...">` dentro de `.polaroid-image`.
+
+### Editar el nav o el footer
+Aparecen idénticos en las 6 páginas (`index.html` + 5 dentro de `pages/`).
+Cualquier cambio hay que replicarlo en todas. Buscar el bloque
+`<header class="nav">` o `<footer class="footer">`.
 
 ---
 

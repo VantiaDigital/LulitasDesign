@@ -19,12 +19,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,500;1,9..144,400;1,9..144,500&family=Nunito:wght@300;400;500;600;700&display=swap" />
 
-  <link rel="stylesheet" href="assets/css/main.css?v=2" />
-  <link rel="stylesheet" href="assets/css/animations.css?v=2" />
+  <link rel="stylesheet" href="assets/css/main.css?v=3" />
+  <link rel="stylesheet" href="assets/css/animations.css?v=3" />
 </head>
-<body>
+<body data-page="home">
 
-  <!-- ===== Loader ===== -->
   <div class="loader" id="loader" aria-hidden="true">
     <div class="loader-heart" aria-hidden="true">
       <svg viewBox="0 0 64 64">
@@ -36,9 +35,8 @@
     <span class="loader-text">un momentito ♡</span>
   </div>
 
-  <!-- ===== Navbar – tipo postal ===== -->
   <header class="nav" id="nav">
-    <a href="#top" class="nav-brand" aria-label="Lulitas Designs — inicio">
+    <a href="index.html" class="nav-brand" aria-label="Lulitas Designs — inicio">
       <span class="nav-stamp">
         <svg viewBox="0 0 60 60" aria-hidden="true">
           <circle cx="30" cy="30" r="26" fill="none" stroke="currentColor" stroke-width=".9" stroke-dasharray="1 3"/>
@@ -52,11 +50,11 @@
     </a>
 
     <nav class="nav-links" aria-label="Navegación principal">
-      <a href="#servicios">qué hago</a>
-      <a href="#proceso">cómo trabajo</a>
-      <a href="#portfolio">cuaderno</a>
-      <a href="#sobre">quién soy</a>
-      <a href="#contacto" class="nav-link-cta">escribime →</a>
+      <a href="pages/servicios.html">qué hago</a>
+      <a href="pages/proceso.html">cómo trabajo</a>
+      <a href="pages/portfolio.html">cuaderno</a>
+      <a href="pages/sobre.html">quién soy</a>
+      <a href="pages/contacto.html" class="nav-link-cta">escribime →</a>
     </nav>
 
     <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
@@ -64,14 +62,13 @@
     </button>
   </header>
 
-  <!-- ===== Mobile drawer ===== -->
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="#servicios">qué hago</a>
-      <a href="#proceso">cómo trabajo</a>
-      <a href="#portfolio">cuaderno</a>
-      <a href="#sobre">quién soy</a>
-      <a href="#contacto">escribime ♡</a>
+      <a href="pages/servicios.html">qué hago</a>
+      <a href="pages/proceso.html">cómo trabajo</a>
+      <a href="pages/portfolio.html">cuaderno</a>
+      <a href="pages/sobre.html">quién soy</a>
+      <a href="pages/contacto.html">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
@@ -79,13 +76,12 @@
     </div>
   </div>
 
-  <main id="top">
+  <main>
 
     <!-- ============================================================ -->
     <!-- HERO – Collage tipo carta                                      -->
     <!-- ============================================================ -->
     <section class="hero">
-      <!-- Doodles dispersos -->
       <svg class="doodle doodle-flor-1" viewBox="0 0 60 60" aria-hidden="true">
         <g fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round">
           <circle cx="30" cy="30" r="4"/>
@@ -116,7 +112,6 @@
 
       <div class="hero-collage">
 
-        <!-- Polaroid izquierdo -->
         <div class="hero-polaroid">
           <span class="washi washi-mint" aria-hidden="true"></span>
           <div class="polaroid-image">
@@ -128,19 +123,14 @@
                 </linearGradient>
               </defs>
               <rect width="280" height="320" fill="url(#pol1)"/>
-              <!-- escena: mesa de trabajo -->
-              <!-- papel grande -->
               <rect x="60" y="60" width="160" height="200" rx="6" fill="#fff8f0" transform="rotate(-4 140 160)"/>
-              <!-- letras a mano -->
               <text x="140" y="155" text-anchor="middle" font-family="Caveat, cursive" font-size="42" fill="#6b3a2a" transform="rotate(-4 140 155)">hola!</text>
               <text x="140" y="195" text-anchor="middle" font-family="Caveat, cursive" font-size="22" fill="#6b3a2a" transform="rotate(-4 140 195)">soy Patricia ♡</text>
-              <!-- lápiz -->
               <g transform="rotate(35 220 240)">
                 <rect x="200" y="232" width="80" height="10" fill="#f5dba0" stroke="#6b3a2a" stroke-width="1"/>
                 <polygon points="280,232 295,237 280,242" fill="#6b3a2a"/>
                 <rect x="200" y="232" width="14" height="10" fill="#e8807a" stroke="#6b3a2a" stroke-width="1"/>
               </g>
-              <!-- corazoncitos -->
               <path d="M50 280s-8-5-8-11c0-3 2-5 5-5 1.5 0 2.5 1 3 1.5.5-.5 1.5-1.5 3-1.5 3 0 5 2 5 5 0 6-8 11-8 11z" fill="#e8807a"/>
               <path d="M230 90s-6-4-6-8c0-2 1.5-4 4-4 1 0 2 .8 2 1.2.5-.4 1.5-1.2 2.5-1.2 2.5 0 4 2 4 4 0 4-6 8-6 8z" fill="#cfe7d7"/>
             </svg>
@@ -148,7 +138,6 @@
           <span class="polaroid-caption">soy <em>Patricia</em> ✿</span>
         </div>
 
-        <!-- Carta a la derecha -->
         <div class="hero-letter">
           <p class="hero-hi">
             <span class="hi-hand">¡hola, hola!</span>
@@ -167,19 +156,18 @@
           </p>
 
           <div class="hero-actions">
-            <a href="#contacto" class="btn-soft">
+            <a href="pages/contacto.html" class="btn-soft">
               quiero mi diseño
               <svg viewBox="0 0 30 18" aria-hidden="true">
                 <path d="M2 9 Q15 -3 28 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
                 <path d="M22 5 L28 9 L24 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
               </svg>
             </a>
-            <a href="#portfolio" class="link-doodle">ver lo que hice</a>
+            <a href="pages/portfolio.html" class="link-doodle">ver lo que hice</a>
           </div>
         </div>
       </div>
 
-      <!-- Stickers pegados a la sección -->
       <span class="sticker sticker-bunny" aria-hidden="true">
         <svg viewBox="0 0 80 80">
           <ellipse cx="40" cy="52" rx="22" ry="20" fill="#fff8f0" stroke="#6b3a2a" stroke-width="1.4"/>
@@ -210,504 +198,65 @@
       </span>
     </section>
 
-    <!-- ===== Divisor ondulado ===== -->
     <svg class="divider divider-wave" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 20 Q100 0 200 20 T400 20 T600 20 T800 20 T1000 20 T1200 20"
-            fill="none" stroke="#6b3a2a" stroke-width="1.4" stroke-linecap="round" stroke-dasharray="0"/>
+            fill="none" stroke="#6b3a2a" stroke-width="1.4" stroke-linecap="round"/>
     </svg>
 
     <!-- ============================================================ -->
-    <!-- SERVICIOS — etiquetas pegadas al fondo                        -->
+    <!-- ÍNDICE DEL CUADERNO                                            -->
     <!-- ============================================================ -->
-    <section class="services" id="servicios">
-
-      <header class="page-head">
-        <p class="page-eyebrow">– qué hago –</p>
-        <h2 class="page-title">
-          un poquito de <em>cada cosa</em>,<br/>
-          mucho <span class="hl">de vos</span>.
-        </h2>
-        <p class="page-sub">
-          Trabajo en cualquier formato: imprimible (PDF listo para
-          imprenta) o digital (para tu Insta, presentaciones, etc.).
-          Estos son los pedidos que más llegan ♡
-        </p>
+    <section class="home-index">
+      <header class="home-index-head">
+        <p class="eyebrow-script">— el índice del cuaderno —</p>
+        <h2>pasá las <em>hojas</em>:</h2>
       </header>
 
-      <div class="tags-wall">
+      <div class="index-grid">
+        <a href="pages/servicios.html" class="index-card">
+          <span class="ic-sticker" style="--c:#cfe7d7">✏︎</span>
+          <span class="ic-num">01</span>
+          <h3>qué hago</h3>
+          <p>Etiquetas, stickers, tags, papelería de eventos, diseño digital y todo lo que se te ocurra a medida.</p>
+          <span class="ic-go">leer <em>→</em></span>
+        </a>
 
-        <article class="tag-card tag-1" data-tilt="-3">
-          <span class="washi washi-pink" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#cfe7d7">✏︎</span>
-          <h3>etiquetas escolares</h3>
-          <p>Para cuadernos, viandas, lápices, mochilas. Con el nombre del peque + diseño favorito.</p>
-          <ul class="tag-list">
-            <li>cuadernos</li><li>viandas</li><li>útiles</li>
-          </ul>
-        </article>
+        <a href="pages/proceso.html" class="index-card">
+          <span class="ic-sticker" style="--c:#f5dba0">✿</span>
+          <span class="ic-num">02</span>
+          <h3>cómo trabajo</h3>
+          <p>Cuatro pasitos simples, sin vueltas raras, sin "cargo extra por cambio". Todo por WhatsApp o email.</p>
+          <span class="ic-go">leer <em>→</em></span>
+        </a>
 
-        <article class="tag-card tag-2" data-tilt="2">
-          <span class="washi washi-butter" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#f5c5c5">♡</span>
-          <h3>stickers a medida</h3>
-          <p>Pliegos en cualquier forma y tamaño. Kiss-cut, troquelados, holográficos. Ideales para regalos.</p>
-          <ul class="tag-list">
-            <li>kiss-cut</li><li>troquelados</li><li>holo</li>
-          </ul>
-          <span class="badge-mini">más pedido</span>
-        </article>
+        <a href="pages/portfolio.html" class="index-card">
+          <span class="ic-sticker" style="--c:#f5c5c5">♡</span>
+          <span class="ic-num">03</span>
+          <h3>cuaderno</h3>
+          <p>Muestras de cada línea que diseñé — etiquetas, stickers, tags, papelería estacional y kits digitales.</p>
+          <span class="ic-go">leer <em>→</em></span>
+        </a>
 
-        <article class="tag-card tag-3" data-tilt="-2">
-          <span class="washi washi-mint" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#f5dba0">✿</span>
-          <h3>tags y cierres</h3>
-          <p>"Gracias por tu compra", "Hecho con amor", "Feliz día". Para que tu marca cierre con onda.</p>
-          <ul class="tag-list">
-            <li>gracias</li><li>hecho con amor</li><li>feliz día</li>
-          </ul>
-        </article>
+        <a href="pages/sobre.html" class="index-card">
+          <span class="ic-sticker" style="--c:#ddd0e5">✦</span>
+          <span class="ic-num">04</span>
+          <h3>quién soy</h3>
+          <p>Una carta cortita contándote por qué hago lo que hago, y por qué cada pedido es distinto.</p>
+          <span class="ic-go">leer <em>→</em></span>
+        </a>
 
-        <article class="tag-card tag-4" data-tilt="3">
-          <span class="washi washi-pink" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#ddd0e5">✦</span>
-          <h3>papelería de eventos</h3>
-          <p>Invitaciones, kits de cumple, candy bar, baby shower. Pieza por pieza, coherente y bonita.</p>
-          <ul class="tag-list">
-            <li>cumples</li><li>baby shower</li><li>casamientos</li>
-          </ul>
-        </article>
-
-        <article class="tag-card tag-5" data-tilt="-1">
-          <span class="washi washi-butter" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#d4e6ef">✱</span>
-          <h3>diseño digital</h3>
-          <p>Posts, historias, plantillas, kits visuales. Tu identidad consistente en cada red.</p>
-          <ul class="tag-list">
-            <li>instagram</li><li>plantillas</li><li>branding</li>
-          </ul>
-        </article>
-
-        <article class="tag-card tag-6" data-tilt="2">
-          <span class="washi washi-mint" aria-hidden="true"></span>
-          <span class="tag-sticker" style="--c:#e8807a">★</span>
-          <h3>diseño a medida</h3>
-          <p>¿Algo distinto? Charlamos, lo pensamos juntas, lo hacemos. Sin límites, paso a paso.</p>
-          <ul class="tag-list">
-            <li>idea propia</li><li>único</li><li>personal</li>
-          </ul>
-        </article>
-
+        <a href="pages/contacto.html" class="index-card">
+          <span class="ic-sticker" style="--c:#e8807a">★</span>
+          <span class="ic-num">05</span>
+          <h3>escribime</h3>
+          <p>Email, Instagram, Linktree. Todos los caminos para empezar a charlar tu próximo proyecto.</p>
+          <span class="ic-go">leer <em>→</em></span>
+        </a>
       </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- PROCESO — checklist en papel rayado                            -->
-    <!-- ============================================================ -->
-    <section class="process" id="proceso">
-      <div class="notebook">
-
-        <header class="notebook-head">
-          <p class="page-eyebrow alt">– cómo trabajamos –</p>
-          <h2 class="notebook-title">
-            simple, sin <em>vueltas raras</em>.
-          </h2>
-        </header>
-
-        <ol class="checklist">
-          <li class="check-item">
-            <span class="check-tick" aria-hidden="true">
-              <svg viewBox="0 0 30 30">
-                <circle cx="15" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M9 16 L13 20 L22 11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <div>
-              <h3>charlamos tu idea</h3>
-              <p>Me escribís por donde quieras. Te pregunto lo justo para entender tiempos, estilo y presupuesto.</p>
-            </div>
-            <span class="check-num">01</span>
-          </li>
-
-          <li class="check-item">
-            <span class="check-tick" aria-hidden="true">
-              <svg viewBox="0 0 30 30">
-                <circle cx="15" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M9 16 L13 20 L22 11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <div>
-              <h3>diseño tu pieza</h3>
-              <p>Trabajo la propuesta en modo Lulitas. Colores, tipografías y detalles pensados para vos. Te paso una preview.</p>
-            </div>
-            <span class="check-num">02</span>
-          </li>
-
-          <li class="check-item">
-            <span class="check-tick" aria-hidden="true">
-              <svg viewBox="0 0 30 30">
-                <circle cx="15" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M9 16 L13 20 L22 11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <div>
-              <h3>ajustamos lo que haga falta</h3>
-              <p>Sin apuro, sin "cargo extra por cambio". Hasta que te enamore.</p>
-            </div>
-            <span class="check-num">03</span>
-          </li>
-
-          <li class="check-item">
-            <span class="check-tick" aria-hidden="true">
-              <svg viewBox="0 0 30 30">
-                <circle cx="15" cy="15" r="13" fill="none" stroke="currentColor" stroke-width="1.4"/>
-                <path d="M9 16 L13 20 L22 11" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
-            </span>
-            <div>
-              <h3>te llega listo</h3>
-              <p>PDF imprimible (con sangrías y márgenes ok) o archivo digital, según pidas.</p>
-            </div>
-            <span class="check-num">04</span>
-          </li>
-        </ol>
-
-        <p class="notebook-foot">
-          <span>todo el proceso por <strong>WhatsApp</strong> o <strong>email</strong> ♡</span>
-        </p>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- PORTFOLIO — muro de polaroids                                  -->
-    <!-- ============================================================ -->
-    <section class="portfolio" id="portfolio">
-      <header class="page-head">
-        <p class="page-eyebrow">– mi cuaderno de ideas –</p>
-        <h2 class="page-title">
-          una vuelta por mi <em>mesa</em>.
-        </h2>
-        <p class="page-sub">
-          Estas son ilustraciones de algunas líneas que diseñé. El catálogo
-          completo vive en mi Insta — actualizo todo el tiempo.
-        </p>
-      </header>
-
-      <div class="board">
-
-        <figure class="polaroid pol-1" data-rot="-3">
-          <span class="washi washi-mint" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="escolares">
-            <div class="art-escolares">
-              <span>Mati</span><span>Mia</span><span>Joaco</span>
-              <span>Lola</span><span>Sofi</span><span>Tomi</span>
-            </div>
-          </div>
-          <figcaption>
-            <span>etiquetas escolares</span>
-            <em>vuelta al cole '26</em>
-          </figcaption>
-        </figure>
-
-        <figure class="polaroid pol-2" data-rot="2">
-          <span class="washi washi-pink" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="stickers">
-            <div class="art-hearts">
-              <span class="h" style="--c:#f5c5c5"></span>
-              <span class="h" style="--c:#cfe7d7"></span>
-              <span class="h" style="--c:#f5dba0"></span>
-              <span class="h" style="--c:#d4e6ef"></span>
-              <span class="h" style="--c:#ddd0e5"></span>
-              <span class="h" style="--c:#e8807a"></span>
-              <span class="h" style="--c:#cfe7d7"></span>
-              <span class="h" style="--c:#f5dba0"></span>
-              <span class="h" style="--c:#f5c5c5"></span>
-            </div>
-          </div>
-          <figcaption>
-            <span>stickers</span>
-            <em>pack corazones pastel</em>
-          </figcaption>
-        </figure>
-
-        <figure class="polaroid pol-3" data-rot="-1">
-          <span class="washi washi-butter" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="tags">
-            <div class="art-tags">
-              <span class="tag-circ" style="--c:#fff8f0">
-                <em>gracias</em><br/>por tu compra
-              </span>
-              <span class="tag-circ" style="--c:#cfe7d7">
-                <em>feliz</em><br/>día!
-              </span>
-              <span class="tag-circ" style="--c:#f5c5c5">
-                <em>hecho</em><br/>con amor
-              </span>
-            </div>
-          </div>
-          <figcaption>
-            <span>tags</span>
-            <em>línea cierre de pedido</em>
-          </figcaption>
-        </figure>
-
-        <figure class="polaroid pol-4" data-rot="3">
-          <span class="washi washi-mint" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="mama">
-            <div class="art-mama">
-              <h4>feliz<br/>día<br/>mamá</h4>
-              <span class="flor-svg" aria-hidden="true">
-                <svg viewBox="0 0 60 60">
-                  <g fill="#e8807a">
-                    <circle cx="30" cy="14" r="8"/>
-                    <circle cx="46" cy="30" r="8"/>
-                    <circle cx="30" cy="46" r="8"/>
-                    <circle cx="14" cy="30" r="8"/>
-                  </g>
-                  <circle cx="30" cy="30" r="6" fill="#f5dba0"/>
-                </svg>
-              </span>
-            </div>
-          </div>
-          <figcaption>
-            <span>estacional</span>
-            <em>día de la madre</em>
-          </figcaption>
-        </figure>
-
-        <figure class="polaroid pol-5" data-rot="-2">
-          <span class="washi washi-pink" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="pascuas">
-            <div class="art-pascuas">
-              <svg viewBox="0 0 80 80" class="bunny-svg" aria-hidden="true">
-                <ellipse cx="40" cy="52" rx="22" ry="20" fill="#fff8f0" stroke="#6b3a2a" stroke-width="1.4"/>
-                <ellipse cx="28" cy="22" rx="6" ry="16" fill="#fff8f0" stroke="#6b3a2a" stroke-width="1.4"/>
-                <ellipse cx="52" cy="22" rx="6" ry="16" fill="#fff8f0" stroke="#6b3a2a" stroke-width="1.4"/>
-                <ellipse cx="28" cy="22" rx="2.5" ry="10" fill="#f5c5c5"/>
-                <ellipse cx="52" cy="22" rx="2.5" ry="10" fill="#f5c5c5"/>
-                <circle cx="33" cy="48" r="2" fill="#6b3a2a"/>
-                <circle cx="47" cy="48" r="2" fill="#6b3a2a"/>
-                <circle cx="40" cy="54" r="2" fill="#e8807a"/>
-              </svg>
-              <h4>pascuas<br/>en lulitas</h4>
-            </div>
-          </div>
-          <figcaption>
-            <span>estacional</span>
-            <em>línea Pascuas</em>
-          </figcaption>
-        </figure>
-
-        <figure class="polaroid pol-6" data-rot="1">
-          <span class="washi washi-butter" aria-hidden="true"></span>
-          <div class="polaroid-image" data-art="digital">
-            <div class="art-digital">
-              <span class="phone">
-                <span class="phone-screen">
-                  <em>tu marca,</em>
-                  <strong>en cada<br/>post ✿</strong>
-                  <span class="phone-dots">
-                    <i style="--c:#e8807a"></i>
-                    <i style="--c:#f5dba0"></i>
-                    <i style="--c:#cfe7d7"></i>
-                  </span>
-                </span>
-              </span>
-            </div>
-          </div>
-          <figcaption>
-            <span>digital</span>
-            <em>kit visual para marcas</em>
-          </figcaption>
-        </figure>
-      </div>
-
-      <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener" class="ig-cta">
-        <svg viewBox="0 0 24 24" aria-hidden="true">
-          <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
-          <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
-        </svg>
-        ver todo en mi Insta
-      </a>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- SOBRE PATRICIA — carta a mano                                  -->
-    <!-- ============================================================ -->
-    <section class="about" id="sobre">
-
-      <div class="about-grid">
-
-        <div class="about-photo">
-          <div class="photo-frame">
-            <span class="washi washi-pink washi-top" aria-hidden="true"></span>
-            <svg viewBox="0 0 320 380" class="photo-art" aria-hidden="true">
-              <defs>
-                <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="0%" stop-color="#fadbd0"/>
-                  <stop offset="100%" stop-color="#f5c5c5"/>
-                </linearGradient>
-              </defs>
-              <rect width="320" height="380" fill="url(#bg2)"/>
-              <!-- silueta abstracta -->
-              <circle cx="160" cy="150" r="62" fill="#fff8f0"/>
-              <path d="M75 380 Q75 240 160 240 Q245 240 245 380 Z" fill="#fff8f0"/>
-              <!-- ojitos -->
-              <circle cx="143" cy="148" r="3" fill="#6b3a2a"/>
-              <circle cx="177" cy="148" r="3" fill="#6b3a2a"/>
-              <!-- sonrisa -->
-              <path d="M147 168 Q160 178 173 168" fill="none" stroke="#e8807a" stroke-width="2.2" stroke-linecap="round"/>
-              <!-- moño en el pelo -->
-              <g transform="translate(160 95)">
-                <path d="M-22 0 Q-12 -8 0 0 Q-12 8 -22 0Z" fill="#e8807a"/>
-                <path d="M22 0 Q12 -8 0 0 Q12 8 22 0Z" fill="#e8807a"/>
-                <circle r="3" fill="#6b3a2a"/>
-              </g>
-              <!-- corazón en el "cuerpo" -->
-              <path d="M160 280s-12-8-12-16c0-4 3-7 7-7 2 0 4 1.5 5 2 1-0.5 3-2 5-2 4 0 7 3 7 7 0 8-12 16-12 16z" fill="#e8807a"/>
-            </svg>
-            <span class="photo-tag">Patricia ✿</span>
-          </div>
-        </div>
-
-        <div class="about-letter">
-          <p class="letter-from">
-            <span>una carta para vos —</span>
-          </p>
-
-          <h2 class="letter-title">
-            soy <em>Patricia</em>,<br/>
-            <span class="script">y diseño desde el corazón.</span>
-          </h2>
-
-          <p class="letter-text">
-            Lulitas nació porque me <strong>aburrían las plantillas</strong>.
-            Cada pedido que llega es distinto, cada nombre cuenta, cada
-            cumple es único — y la papelería que va a esa historia
-            también tiene que serlo.
-          </p>
-
-          <p class="letter-text">
-            Trabajo desde Argentina, sola, con mate al lado y
-            corazones por todos lados. Si te imaginás algo, te ayudo
-            a que tome forma.
-          </p>
-
-          <div class="letter-stats">
-            <div>
-              <strong>+176</strong>
-              <span>piezas hechas</span>
-            </div>
-            <div>
-              <strong>4</strong>
-              <span>años creando</span>
-            </div>
-            <div>
-              <strong>100%</strong>
-              <span>a medida ♡</span>
-            </div>
-          </div>
-
-          <p class="letter-sign">
-            con cariño,<br/>
-            <span class="signature">Patri</span>
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- POR QUÉ — stickers redondos                                    -->
-    <!-- ============================================================ -->
-    <section class="why">
-      <h2 class="why-title">cositas que <em>me importan</em>:</h2>
-
-      <div class="why-wall">
-        <div class="why-sticker w-1" data-tilt="-4">
-          <span class="ws-emoji">✿</span>
-          <h3>hecho con tiempo</h3>
-          <p>Cada pieza pasa por mis manos. Nada de plantillas reusadas.</p>
-        </div>
-        <div class="why-sticker w-2" data-tilt="3">
-          <span class="ws-emoji">♡</span>
-          <h3>cambios sin culpa</h3>
-          <p>Si algo no te cierra, lo ajustamos. Cuantas veces haga falta, sin extras.</p>
-        </div>
-        <div class="why-sticker w-3" data-tilt="-2">
-          <span class="ws-emoji">✦</span>
-          <h3>listo para imprenta</h3>
-          <p>PDF con sangrías, márgenes y calidad para que la imprenta diga "qué hermoso".</p>
-        </div>
-        <div class="why-sticker w-4" data-tilt="4">
-          <span class="ws-emoji">★</span>
-          <h3>trato cercano</h3>
-          <p>Te respondo yo, no un equipo. La charla es directa, simple y cálida.</p>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============================================================ -->
-    <!-- CONTACTO — nota grande                                         -->
-    <!-- ============================================================ -->
-    <section class="contact" id="contacto">
-
-      <div class="note">
-        <span class="note-pin" aria-hidden="true">
-          <svg viewBox="0 0 40 40">
-            <circle cx="20" cy="14" r="9" fill="#e8807a" stroke="#6b3a2a" stroke-width="1.2"/>
-            <circle cx="17" cy="11" r="2.5" fill="#fff8f0"/>
-            <path d="M20 23 L20 36" stroke="#6b3a2a" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
-        </span>
-
-        <p class="note-eyebrow">— escribime —</p>
-        <h2 class="note-title">
-          ¿empezamos a darle <em>forma</em><br/>
-          a tu idea?
-        </h2>
-        <p class="note-text">
-          Contame qué tenés en mente. Te respondo en menos de 24 hs,
-          con muchas ganas de empezar ♡
-        </p>
-
-        <div class="note-channels">
-          <a href="mailto:lulitasdesigns@gmail.com" class="channel">
-            <span class="channel-circle" style="--c:#cfe7d7" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
-            </span>
-            <div>
-              <span class="channel-label">email</span>
-              <strong>lulitasdesigns@gmail.com</strong>
-            </div>
-          </a>
-
-          <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener" class="channel">
-            <span class="channel-circle" style="--c:#f5c5c5" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
-            </span>
-            <div>
-              <span class="channel-label">instagram</span>
-              <strong>@lulitas.designs</strong>
-            </div>
-          </a>
-
-          <a href="https://linktr.ee/LulitasDesigns" target="_blank" rel="noopener" class="channel">
-            <span class="channel-circle" style="--c:#f5dba0" aria-hidden="true">
-              <svg viewBox="0 0 24 24"><path d="M9 17c-2-2-2-6 0-8l3-3M15 7c2 2 2 6 0 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
-            </span>
-            <div>
-              <span class="channel-label">todos los links</span>
-              <strong>linktr.ee/LulitasDesigns</strong>
-            </div>
-          </a>
-        </div>
-      </div>
-
     </section>
 
   </main>
 
-  <!-- ===== Footer cálido ===== -->
   <footer class="footer">
     <svg class="footer-wave" viewBox="0 0 1200 40" preserveAspectRatio="none" aria-hidden="true">
       <path d="M0 20 Q100 0 200 20 T400 20 T600 20 T800 20 T1000 20 T1200 20"
@@ -727,11 +276,11 @@
       </div>
 
       <nav class="footer-nav">
-        <a href="#servicios">qué hago</a>
-        <a href="#proceso">cómo trabajo</a>
-        <a href="#portfolio">cuaderno</a>
-        <a href="#sobre">quién soy</a>
-        <a href="#contacto">escribime</a>
+        <a href="pages/servicios.html">qué hago</a>
+        <a href="pages/proceso.html">cómo trabajo</a>
+        <a href="pages/portfolio.html">cuaderno</a>
+        <a href="pages/sobre.html">quién soy</a>
+        <a href="pages/contacto.html">escribime</a>
       </nav>
 
       <div class="footer-meta">
@@ -742,7 +291,7 @@
     </div>
   </footer>
 
-  <script src="assets/js/main.js?v=2" defer></script>
-  <script src="assets/js/animations.js?v=2" defer></script>
+  <script src="assets/js/main.js?v=3" defer></script>
+  <script src="assets/js/animations.js?v=3" defer></script>
 </body>
 </html>

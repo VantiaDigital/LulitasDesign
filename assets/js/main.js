@@ -1,6 +1,7 @@
 /* =============================================================
-   Lulitas Designs · main.js  ·  v2
-   Sin cursor custom. Nav, drawer, smooth scroll, año footer.
+   Lulitas Designs · main.js  ·  v3
+   Sin cursor custom. Nav, drawer, smooth scroll a anchors locales,
+   active link por pathname (multipágina), año footer, loader.
    ============================================================= */
 
 (() => {
@@ -50,7 +51,7 @@
   drawer?.querySelectorAll('a').forEach(a => a.addEventListener('click', closeDrawer));
   window.addEventListener('keydown', e => { if (e.key === 'Escape') closeDrawer(); });
 
-  // ---------- Smooth scroll a anchors ----------
+  // ---------- Smooth scroll para anchors locales (#xxx) ----------
   document.querySelectorAll('a[href^="#"]').forEach(link => {
     link.addEventListener('click', e => {
       const href = link.getAttribute('href');
@@ -70,32 +71,22 @@
   document.body.appendChild(progress);
   const updateProgress = () => {
     const h = document.documentElement;
-    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight);
+    const scrolled = h.scrollTop / (h.scrollHeight - h.clientHeight || 1);
     progress.style.width = `${Math.min(100, Math.max(0, scrolled * 100))}%`;
   };
   window.addEventListener('scroll', updateProgress, { passive: true });
   updateProgress();
 
-  // ---------- Active nav link mientras scrolleás ----------
-  const sectionIds = ['servicios', 'proceso', 'portfolio', 'sobre', 'contacto'];
-  const sections = sectionIds.map(id => document.getElementById(id)).filter(Boolean);
-  const navLinks = document.querySelectorAll('.nav-links a');
-
-  if (sections.length && navLinks.length) {
-    const setActive = id => {
-      navLinks.forEach(a => {
-        const isMatch = a.getAttribute('href') === `#${id}`;
-        a.classList.toggle('is-active', isMatch);
-      });
-    };
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting && entry.intersectionRatio > 0.35) {
-          setActive(entry.target.id);
-        }
-      });
-    }, { threshold: [0.35, 0.6] });
-    sections.forEach(s => observer.observe(s));
+  // ---------- Active nav link según página actual ----------
+  // body[data-page="servicios"] → marca <a href="...servicios.html">
+  const page = document.body.dataset.page;
+  if (page) {
+    document.querySelectorAll('.nav-links a, .drawer-links a').forEach(a => {
+      const href = a.getAttribute('href') || '';
+      const matchesPage = href.endsWith(`${page}.html`);
+      const matchesHome = page === 'home' && (href.endsWith('index.html') || href === 'index.html');
+      if (matchesPage || matchesHome) a.classList.add('is-active');
+    });
   }
 
 })();
