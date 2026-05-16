@@ -156,14 +156,16 @@
           </p>
 
           <div class="hero-actions">
-            <a href="pages/contacto.html" class="btn-soft">
-              quiero mi diseño
-              <svg viewBox="0 0 30 18" aria-hidden="true">
-                <path d="M2 9 Q15 -3 28 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                <path d="M22 5 L28 9 L24 13" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"/>
+            <a href="pages/portfolio.html" class="btn btn-primary btn-big">
+              <svg viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" transform="scale(.85) translate(2,2)"/>
               </svg>
+              ver productos &amp; armar pedido
             </a>
-            <a href="pages/portfolio.html" class="link-doodle">ver lo que hice</a>
+            <a href="pages/contacto.html" class="btn btn-secondary btn-big">
+              hablar conmigo
+            </a>
           </div>
         </div>
       </div>
@@ -291,7 +293,53 @@
     </div>
   </footer>
 
+  <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+      <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+      <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+      <path d="M16 17 L16 22 M13.5 19.5 L18.5 19.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span class="cart-count" id="cartCount" hidden>0</span>
+  </button>
+
+  <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
+
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+    <header class="cart-head">
+      <h2>tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+    </header>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <div class="cart-total">
+        <span class="cart-total-label">total</span>
+        <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
+      </div>
+      <form class="cart-form" id="cartForm" novalidate>
+        <label>tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        </label>
+        <label>cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        </label>
+        <label>algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        </label>
+        <button type="submit" class="cart-submit" id="cartSubmit" disabled>
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+          </svg>
+          enviar pedido por email
+        </button>
+        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
+        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+      </form>
+    </div>
+  </aside>
+
   <script src="assets/js/main.js?v=3" defer></script>
   <script src="assets/js/animations.js?v=3" defer></script>
+  <script src="assets/js/cart.js?v=1" defer></script>
 </body>
 </html>
