@@ -1,0 +1,28 @@
+# OS
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Node (por si en el futuro se agrega build)
+node_modules/
+dist/
+.cache/
+.parcel-cache/
+
+# Logs / locks de futuro
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local env
+.env
+.env.local
+
+# Cloudflare wrangler cache
+.wrangler/
