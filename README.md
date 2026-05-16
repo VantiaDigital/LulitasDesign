@@ -1,7 +1,7 @@
 # Lulitas Designs · Sitio web
 
 Web oficial de **Lulitas Designs** — papelería imprimible y digital, hecha a medida.
-Por **Patricia**, desde Argentina 🇦🇷.
+Por **Patricia**, argentina viviendo en **Mallorca** 🇦🇷 → 🇪🇸.
 
 > Sitio estático en HTML/CSS/JS vanilla, **sin build**. Deploy directo en
 > **GitHub Pages** o **Cloudflare Pages**.
