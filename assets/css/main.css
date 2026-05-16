@@ -1151,6 +1151,116 @@ p { margin: 0; }
 .footer-sig { margin-top: .6rem; font-family: var(--f-script); font-size: 1rem; }
 
 /* ============================================================
+   CATÁLOGO — secciones por categoría (cuaderno)
+   ============================================================ */
+.catalog-wrap {
+  max-width: var(--maxw); margin: 4rem auto 0;
+  padding: 0 var(--pad);
+}
+
+.catalog-intro {
+  text-align: center;
+  margin: 6rem auto 2rem;
+  max-width: 640px;
+}
+.catalog-intro .ci-eyebrow {
+  font-family: var(--f-script); font-size: 1.4rem;
+  color: var(--mint-deep); margin-bottom: .4rem;
+}
+.catalog-intro h2 {
+  font-family: var(--f-serif); font-weight: 400;
+  font-size: clamp(1.8rem, 4.4vw, 2.8rem);
+  color: var(--wine); line-height: 1.05;
+}
+.catalog-intro h2 em { font-style: italic; color: var(--pink-deep); }
+.catalog-intro p {
+  margin-top: 1rem; color: var(--wine-soft); font-size: 1rem;
+}
+
+.catalog-section {
+  margin: 4rem 0;
+}
+
+.catalog-section-head {
+  display: flex; align-items: baseline; gap: 1rem;
+  margin-bottom: 1.8rem;
+  padding-bottom: 1rem;
+  border-bottom: 1.5px dashed var(--blush-deep);
+  position: relative;
+}
+.catalog-section-head .cs-num {
+  font-family: var(--f-script); font-size: 1.5rem; color: var(--pink-deep);
+  flex-shrink: 0;
+}
+.catalog-section-head h3 {
+  font-family: var(--f-serif); font-style: italic; font-weight: 400;
+  font-size: clamp(1.5rem, 3.4vw, 2.2rem);
+  color: var(--wine); line-height: 1; flex: 1;
+}
+.catalog-section-head .cs-meta {
+  font-family: var(--f-script); font-size: 1.2rem; color: var(--wine-soft);
+  display: none;
+}
+@media (min-width: 700px) {
+  .catalog-section-head .cs-meta { display: inline; }
+}
+
+.catalog-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.catalog-card {
+  position: relative;
+  background: var(--paper);
+  padding: 1.4rem 1.3rem 1.6rem;
+  border-radius: 12px;
+  border: 1.5px dashed rgba(107,58,42,.18);
+  transition: transform .35s var(--ease-snap), background .25s, border-color .25s, box-shadow .35s;
+  text-align: left;
+  display: flex; flex-direction: column;
+  min-height: 142px;
+}
+.catalog-card:hover {
+  background: #fff;
+  border-color: var(--wine);
+  transform: translateY(-3px) rotate(-.5deg);
+  box-shadow: 0 12px 26px rgba(107,58,42,.12);
+}
+
+.catalog-card .cc-ico {
+  display: inline-block;
+  font-family: var(--f-serif); font-style: italic; font-weight: 500;
+  font-size: 1.2rem; color: var(--blush-deep);
+  margin-bottom: .4rem;
+}
+
+.catalog-card h4 {
+  font-family: var(--f-script); font-size: 1.55rem;
+  color: var(--wine); font-weight: 700; line-height: 1.05;
+  margin-bottom: .35rem;
+}
+.catalog-card p {
+  font-size: .9rem; color: var(--wine-soft);
+  line-height: 1.45;
+}
+.catalog-card .cc-format {
+  margin-top: auto;
+  padding-top: .7rem;
+  font-size: .68rem; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--pink-deep); font-weight: 600;
+}
+
+/* Variantes pastel para reforzar cada categoría */
+.cat-color-1 .catalog-card { background: linear-gradient(180deg, #fff 0%, var(--paper-warm) 100%); }
+.cat-color-2 .catalog-card { background: linear-gradient(180deg, #fff 0%, #fdebec 100%); }
+.cat-color-3 .catalog-card { background: linear-gradient(180deg, #fff 0%, #fdf3df 100%); }
+.cat-color-4 .catalog-card { background: linear-gradient(180deg, #fff 0%, #eef6ee 100%); }
+.cat-color-5 .catalog-card { background: linear-gradient(180deg, #fff 0%, #eef2f7 100%); }
+.cat-color-6 .catalog-card { background: linear-gradient(180deg, #fff 0%, #f4eef5 100%); }
+
+/* ============================================================
    PAGE HERO — cabecera de subpáginas
    ============================================================ */
 .page-hero {
