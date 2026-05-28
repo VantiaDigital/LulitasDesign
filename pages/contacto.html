@@ -23,7 +23,7 @@
         <text x="32" y="32" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#6b3a2a">LD</text>
       </svg>
     </div>
-    <span class="loader-text">un momentito ♡</span>
+    <span class="loader-text" data-en="one sec ♡">un momentito ♡</span>
   </div>
 
   <header class="nav" id="nav">
@@ -40,30 +40,36 @@
       </span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html" class="nav-link-cta">escribime →</a>
+    <nav class="nav-links" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" class="nav-link-cta" data-en="say hello →">escribime →</a>
     </nav>
 
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-end">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-en-aria-label="Language">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" data-en-aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html">escribime ♡</a>
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" data-en="say hello ♡">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
-      <a href="mailto:lulitasdesigns@gmail.com">email</a>
+      <a href="mailto:lulitasdesigns@gmail.com" data-en="email">email</a>
     </div>
   </div>
 
@@ -77,12 +83,12 @@
       <svg class="ph-doodle ph-doodle-2" viewBox="0 0 30 30" aria-hidden="true">
         <path d="M15 26s-11-7-11-15c0-4 3-7 7-7 2.5 0 4 2 4 2s1.5-2 4-2c4 0 7 3 7 7 0 8-11 15-11 15z" fill="currentColor"/>
       </svg>
-      <p class="ph-eyebrow">— escribime —</p>
-      <h1 class="ph-title">
+      <p class="ph-eyebrow" data-en="— say hello —">— escribime —</p>
+      <h1 class="ph-title" data-en="shall we start <em>shaping</em><br/><span class=&quot;hl&quot;>your idea?</span>">
         ¿empezamos a darle <em>forma</em><br/>
         <span class="hl">a tu idea?</span>
       </h1>
-      <p class="ph-sub">
+      <p class="ph-sub" data-en="Tell me what you have in mind, even just a little. I read from Mallorca (CET) and reply within 24 hrs ♡">
         Contame qué tenés en mente, aunque sea poquito. Te leo
         desde Mallorca (CET) y respondo en menos de 24 hs ♡
       </p>
@@ -99,11 +105,11 @@
           </svg>
         </span>
 
-        <p class="note-eyebrow">— elegí tu favorito —</p>
-        <h2 class="note-title">
+        <p class="note-eyebrow" data-en="— pick your favourite —">— elegí tu favorito —</p>
+        <h2 class="note-title" data-en="three ways to <em>chat with me</em>.">
           tres caminos para <em>charlarme</em>.
         </h2>
-        <p class="note-text">
+        <p class="note-text" data-en="Email for something more detailed, Insta for quick messages, or Linktree if you want all my links at once. I reply from Mallorca, in CET ♡">
           Email para algo más detallado, Insta para mensajes rápidos
           o Linktree si querés ver todos mis links de una. Te respondo
           desde Mallorca, en horario CET ♡
@@ -115,7 +121,7 @@
               <svg viewBox="0 0 24 24"><path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round"/></svg>
             </span>
             <div>
-              <span class="channel-label">email</span>
+              <span class="channel-label" data-en="email">email</span>
               <strong>lulitasdesigns@gmail.com</strong>
             </div>
           </a>
@@ -125,7 +131,7 @@
               <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.6"/><circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/></svg>
             </span>
             <div>
-              <span class="channel-label">instagram</span>
+              <span class="channel-label" data-en="instagram">instagram</span>
               <strong>@lulitas.designs</strong>
             </div>
           </a>
@@ -135,7 +141,7 @@
               <svg viewBox="0 0 24 24"><path d="M9 17c-2-2-2-6 0-8l3-3M15 7c2 2 2 6 0 8l-3 3" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg>
             </span>
             <div>
-              <span class="channel-label">todos los links</span>
+              <span class="channel-label" data-en="all the links">todos los links</span>
               <strong>linktr.ee/LulitasDesigns</strong>
             </div>
           </a>
@@ -145,9 +151,9 @@
     </section>
 
     <section class="nextpage">
-      <p class="nextpage-eyebrow">— o si querés volver al inicio, —</p>
+      <p class="nextpage-eyebrow" data-en="— or if you'd like to go back, —">— o si querés volver al inicio, —</p>
       <a href="../index.html" class="nextpage-link">
-        a la portada del cuaderno <span class="arrow">→</span>
+        <span data-en="to the notebook cover">a la portada del cuaderno</span> <span class="arrow">→</span>
       </a>
     </section>
 
@@ -164,25 +170,25 @@
           <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 3"/>
           <text x="40" y="50" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="currentColor">LD</text>
         </svg>
-        <p><em>Lulitas Designs</em><br/><span>papelería con alma · argentina en Mallorca ♡</span></p>
+        <p><em>Lulitas Designs</em><br/><span data-en="stationery with soul · Argentinian in Mallorca ♡">papelería con alma · argentina en Mallorca ♡</span></p>
       </div>
       <nav class="footer-nav">
-        <a href="servicios.html">qué hago</a>
-        <a href="proceso.html">cómo trabajo</a>
-        <a href="portfolio.html">cuaderno</a>
-        <a href="sobre.html">quién soy</a>
-        <a href="contacto.html">escribime</a>
+        <a href="servicios.html" data-en="what I do">qué hago</a>
+        <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+        <a href="portfolio.html" data-en="notebook">cuaderno</a>
+        <a href="sobre.html" data-en="about me">quién soy</a>
+        <a href="contacto.html" data-en="say hello">escribime</a>
       </nav>
       <div class="footer-meta">
         <p>© <span id="year">2026</span> · Lulitas Designs</p>
-        <p>diseños 100% originales — todos los derechos a su autora</p>
-        <p class="footer-sig">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
+        <p data-en="100% original designs — all rights reserved by the artist">diseños 100% originales — todos los derechos a su autora</p>
+        <p class="footer-sig" data-en="site lovingly built by <a href=&quot;https://www.vantia.digital/&quot; rel=&quot;noopener noreferrer&quot; class=&quot;vantia-link&quot;>Vantia Digital</a>">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
       </div>
     </div>
   </footer>
 
   <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
-  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido" data-en-aria-label="View my order">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -193,41 +199,42 @@
 
   <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido" data-en-aria-label="Your order">
     <header class="cart-head">
-      <h2>tu <em>pedido</em> ♡</h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+      <h2 data-en="your <em>order</em> ♡">tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido" data-en-aria-label="Close order">×</button>
     </header>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span class="cart-total-label">total</span>
+        <span class="cart-total-label" data-en="total">total</span>
         <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
       </div>
       <form class="cart-form" id="cartForm" novalidate>
-        <label>tu nombre
-          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        <label data-en="your name">tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" data-en-placeholder="what's your name?" />
         </label>
-        <label>cómo te contacto
-          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        <label data-en="how to reach you">cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" data-en-placeholder="whatsapp, email or instagram" />
         </label>
-        <label>algo más
-          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        <label data-en="anything else">algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..." data-en-placeholder="dates, quantities, ideas..."></textarea>
         </label>
         <button type="submit" class="cart-submit" id="cartSubmit" disabled>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
           </svg>
-          enviar pedido por email
+          <span data-en="send order by email">enviar pedido por email</span>
         </button>
-        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
-        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+        <button type="button" class="cart-clear" id="cartClear" data-en="clear order">vaciar pedido</button>
+        <p class="cart-note" data-en="I'll open your mail client with everything ready.<br/>You review &amp; send ♡">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
       </form>
     </div>
   </aside>
 
+  <script src="../assets/js/i18n.js?v=1" defer></script>
   <script src="../assets/js/main.js?v=3" defer></script>
   <script src="../assets/js/animations.js?v=3" defer></script>
-  <script src="../assets/js/cart.js?v=1" defer></script>
+  <script src="../assets/js/cart.js?v=2" defer></script>
 </body>
 </html>

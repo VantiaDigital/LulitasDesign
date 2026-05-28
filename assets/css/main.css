@@ -1433,6 +1433,44 @@ p { margin: 0; }
 }
 
 /* ============================================================
+   LANG TOGGLE — switch ES/EN en el nav
+   ============================================================ */
+.nav-end {
+  display: inline-flex;
+  align-items: center;
+  gap: .75rem;
+}
+
+.lang-toggle {
+  display: inline-flex;
+  background: var(--paper-warm);
+  border-radius: 999px;
+  padding: 3px;
+  border: 1px solid rgba(107,58,42,.15);
+  box-shadow: 0 1px 2px rgba(107,58,42,.05);
+}
+.lang-btn {
+  font-family: var(--f-sans);
+  font-weight: 700;
+  font-size: .72rem;
+  letter-spacing: .08em;
+  padding: .35rem .75rem;
+  border-radius: 999px;
+  cursor: pointer;
+  border: 0;
+  background: transparent;
+  color: var(--wine-soft);
+  transition: background .25s, color .25s, transform .2s var(--ease-snap);
+  line-height: 1;
+}
+.lang-btn:hover { color: var(--wine); transform: scale(1.04); }
+.lang-btn.is-active {
+  background: var(--wine);
+  color: var(--paper);
+}
+.lang-btn.is-active:hover { color: var(--paper); transform: scale(1); }
+
+/* ============================================================
    BOTONES — sans-serif bold, contraste claro, inconfundibles
    ============================================================ */
 .btn {

@@ -23,7 +23,7 @@
         <text x="32" y="32" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#6b3a2a">LD</text>
       </svg>
     </div>
-    <span class="loader-text">un momentito ♡</span>
+    <span class="loader-text" data-en="one sec ♡">un momentito ♡</span>
   </div>
 
   <header class="nav" id="nav">
@@ -40,30 +40,36 @@
       </span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html" class="nav-link-cta">escribime →</a>
+    <nav class="nav-links" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" class="nav-link-cta" data-en="say hello →">escribime →</a>
     </nav>
 
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-end">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-en-aria-label="Language">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" data-en-aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html">escribime ♡</a>
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" data-en="say hello ♡">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
-      <a href="mailto:lulitasdesigns@gmail.com">email</a>
+      <a href="mailto:lulitasdesigns@gmail.com" data-en="email">email</a>
     </div>
   </div>
 
@@ -77,25 +83,25 @@
       <svg class="ph-doodle ph-doodle-2" viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 2 L13 9 L20 10 L13 13 L12 22 L11 13 L4 10 L11 9 Z" fill="currentColor"/>
       </svg>
-      <p class="ph-eyebrow">— mi cuaderno de ideas —</p>
-      <h1 class="ph-title">
+      <p class="ph-eyebrow" data-en="— my idea notebook —">— mi cuaderno de ideas —</p>
+      <h1 class="ph-title" data-en="a tour around my <em>desk</em>.">
         una vuelta por mi <em>mesa</em>.
       </h1>
-      <p class="ph-sub">
+      <p class="ph-sub" data-en="These are illustrations of some lines I've designed. The full catalog lives on my Insta — I keep adding things ♡">
         Estas son ilustraciones de algunas líneas que diseñé. El catálogo
         completo vive en mi Insta — actualizo todo el tiempo ♡
       </p>
     </section>
 
     <!-- Banner: cómo funciona el pedido -->
-    <section class="order-banner" aria-label="Cómo funciona el pedido">
-      <p class="order-banner-title">✿ <em>cómo armar tu pedido</em> ✿</p>
+    <section class="order-banner" aria-label="Cómo funciona el pedido" data-en-aria-label="How orders work">
+      <p class="order-banner-title" data-en="✿ <em>how to build your order</em> ✿">✿ <em>cómo armar tu pedido</em> ✿</p>
       <div class="order-banner-steps">
-        <span class="order-banner-step"><span class="step-num">1</span> agregás los productos que te interesan</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>1</span> add the products you like"><span class="step-num">1</span> agregás los productos que te interesan</span>
         <span class="order-banner-arrow" aria-hidden="true">→</span>
-        <span class="order-banner-step"><span class="step-num">2</span> abrís el mail con todo el detalle armado</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>2</span> open the mail with everything ready"><span class="step-num">2</span> abrís el mail con todo el detalle armado</span>
         <span class="order-banner-arrow" aria-hidden="true">→</span>
-        <span class="order-banner-step"><span class="step-num">3</span> te respondo con tu presupuesto ♡</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>3</span> I reply with your quote ♡"><span class="step-num">3</span> te respondo con tu presupuesto ♡</span>
       </div>
     </section>
 
@@ -112,8 +118,8 @@
             </div>
           </div>
           <figcaption>
-            <span>etiquetas escolares</span>
-            <em>vuelta al cole '26</em>
+            <span data-en="school labels">etiquetas escolares</span>
+            <em data-en="back to school '26">vuelta al cole '26</em>
           </figcaption>
         </figure>
 
@@ -133,8 +139,8 @@
             </div>
           </div>
           <figcaption>
-            <span>stickers</span>
-            <em>pack corazones pastel</em>
+            <span data-en="stickers">stickers</span>
+            <em data-en="pastel hearts pack">pack corazones pastel</em>
           </figcaption>
         </figure>
 
@@ -142,20 +148,20 @@
           <span class="washi washi-butter" aria-hidden="true"></span>
           <div class="polaroid-image" data-art="tags">
             <div class="art-tags">
-              <span class="tag-circ" style="--c:#fff8f0">
+              <span class="tag-circ" style="--c:#fff8f0" data-en="<em>thanks</em><br/>for your order">
                 <em>gracias</em><br/>por tu compra
               </span>
-              <span class="tag-circ" style="--c:#cfe7d7">
+              <span class="tag-circ" style="--c:#cfe7d7" data-en="<em>happy</em><br/>day!">
                 <em>feliz</em><br/>día!
               </span>
-              <span class="tag-circ" style="--c:#f5c5c5">
+              <span class="tag-circ" style="--c:#f5c5c5" data-en="<em>made</em><br/>with love">
                 <em>hecho</em><br/>con amor
               </span>
             </div>
           </div>
           <figcaption>
-            <span>tags</span>
-            <em>línea cierre de pedido</em>
+            <span data-en="tags">tags</span>
+            <em data-en="order packaging line">línea cierre de pedido</em>
           </figcaption>
         </figure>
 
@@ -163,7 +169,7 @@
           <span class="washi washi-mint" aria-hidden="true"></span>
           <div class="polaroid-image" data-art="mama">
             <div class="art-mama">
-              <h4>feliz<br/>día<br/>mamá</h4>
+              <h4 data-en="happy<br/>mother's<br/>day">feliz<br/>día<br/>mamá</h4>
               <span class="flor-svg" aria-hidden="true">
                 <svg viewBox="0 0 60 60">
                   <g fill="#e8807a">
@@ -178,8 +184,8 @@
             </div>
           </div>
           <figcaption>
-            <span>estacional</span>
-            <em>día de la madre</em>
+            <span data-en="seasonal">estacional</span>
+            <em data-en="mother's day">día de la madre</em>
           </figcaption>
         </figure>
 
@@ -197,12 +203,12 @@
                 <circle cx="47" cy="48" r="2" fill="#6b3a2a"/>
                 <circle cx="40" cy="54" r="2" fill="#e8807a"/>
               </svg>
-              <h4>pascuas<br/>en lulitas</h4>
+              <h4 data-en="easter<br/>at lulitas">pascuas<br/>en lulitas</h4>
             </div>
           </div>
           <figcaption>
-            <span>estacional</span>
-            <em>línea Pascuas</em>
+            <span data-en="seasonal">estacional</span>
+            <em data-en="Easter line">línea Pascuas</em>
           </figcaption>
         </figure>
 
@@ -212,8 +218,8 @@
             <div class="art-digital">
               <span class="phone">
                 <span class="phone-screen">
-                  <em>tu marca,</em>
-                  <strong>en cada<br/>post ✿</strong>
+                  <em data-en="your brand,">tu marca,</em>
+                  <strong data-en="in every<br/>post ✿">en cada<br/>post ✿</strong>
                   <span class="phone-dots">
                     <i style="--c:#e8807a"></i>
                     <i style="--c:#f5dba0"></i>
@@ -224,8 +230,8 @@
             </div>
           </div>
           <figcaption>
-            <span>digital</span>
-            <em>kit visual para marcas</em>
+            <span data-en="digital">digital</span>
+            <em data-en="visual kit for brands">kit visual para marcas</em>
           </figcaption>
         </figure>
       </div>
@@ -238,9 +244,9 @@
     <div class="catalog-wrap">
 
       <header class="catalog-intro">
-        <p class="ci-eyebrow">— y el catálogo completito —</p>
-        <h2>todo lo que <em>podés pedirme</em>, por hoja.</h2>
-        <p>Cada bloque junta los pedidos más típicos de cada línea — algunos
+        <p class="ci-eyebrow" data-en="— and the full catalog —">— y el catálogo completito —</p>
+        <h2 data-en="everything you can <em>order from me</em>, by page.">todo lo que <em>podés pedirme</em>, por hoja.</h2>
+        <p data-en="Each block groups the most typical orders per line — some are printable (you get the PDF) and others digital for direct use on social. If you don't see yours, I also do custom ♡">Cada bloque junta los pedidos más típicos de cada línea — algunos
           son imprimibles (te llega el PDF) y otros son digitales para usar
           directo en redes. Si no ves lo tuyo, también lo hago a medida ♡</p>
       </header>
@@ -249,45 +255,45 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">01 ✿</span>
-          <h3>vuelta al cole</h3>
-          <span class="cs-meta">— para los peques —</span>
+          <h3 data-en="back to school">vuelta al cole</h3>
+          <span class="cs-meta" data-en="— for the little ones —">— para los peques —</span>
         </header>
         <div class="catalog-grid cat-color-1">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>etiquetas de cuaderno</h4>
-            <p>Con el nombre del peque + diseño favorito. Pliegos de 12, 24 o 36 unidades.</p>
-            <span class="cc-format">imprimible · A4</span>
+            <h4 data-en="notebook labels">etiquetas de cuaderno</h4>
+            <p data-en="With the kid's name + favourite design. Sheets of 12, 24 or 36 units.">Con el nombre del peque + diseño favorito. Pliegos de 12, 24 o 36 unidades.</p>
+            <span class="cc-format" data-en="printable · A4">imprimible · A4</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>etiquetas de útiles</h4>
-            <p>Mini etiquetas circulares para lápices, gomas, cartucheras y reglas.</p>
-            <span class="cc-format">imprimible · pliego mini</span>
+            <h4 data-en="supply labels">etiquetas de útiles</h4>
+            <p data-en="Mini round labels for pencils, erasers, pencil cases and rulers.">Mini etiquetas circulares para lápices, gomas, cartucheras y reglas.</p>
+            <span class="cc-format" data-en="printable · mini sheet">imprimible · pliego mini</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>etiquetas tupper &amp; vianda</h4>
-            <p>Resistentes al agua. Para botellas, fiambreras, snacks y termo.</p>
-            <span class="cc-format">imprimible · vinilo</span>
+            <h4 data-en="lunchbox &amp; bottle labels">etiquetas tupper &amp; vianda</h4>
+            <p data-en="Water-resistant. For bottles, lunchboxes, snacks and thermos.">Resistentes al agua. Para botellas, fiambreras, snacks y termo.</p>
+            <span class="cc-format" data-en="printable · vinyl">imprimible · vinilo</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>marca abrigo &amp; mochila</h4>
-            <p>Termoadhesivas o de tela. Aguantan el lavado y no se despegan.</p>
-            <span class="cc-format">imprimible · termo / tela</span>
+            <h4 data-en="jacket &amp; backpack labels">marca abrigo &amp; mochila</h4>
+            <p data-en="Iron-on or fabric. Withstand washing without coming off.">Termoadhesivas o de tela. Aguantan el lavado y no se despegan.</p>
+            <span class="cc-format" data-en="printable · iron-on / fabric">imprimible · termo / tela</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>marca-libros</h4>
-            <p>Personalizados con el nombre y un dibujito. Para leer con onda.</p>
-            <span class="cc-format">imprimible · cartulina</span>
+            <h4 data-en="bookmarks">marca-libros</h4>
+            <p data-en="Personalised with name and a little drawing. Reading with style.">Personalizados con el nombre y un dibujito. Para leer con onda.</p>
+            <span class="cc-format" data-en="printable · cardstock">imprimible · cartulina</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>pack completo</h4>
-            <p>Todo lo de arriba, en un solo PDF coherente. Listo para imprenta.</p>
-            <span class="cc-format">pack · PDF</span>
+            <h4 data-en="full pack">pack completo</h4>
+            <p data-en="Everything above, in one cohesive PDF. Ready for print.">Todo lo de arriba, en un solo PDF coherente. Listo para imprenta.</p>
+            <span class="cc-format" data-en="pack · PDF">pack · PDF</span>
           </article>
         </div>
       </section>
@@ -296,45 +302,45 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">02 ♡</span>
-          <h3>stickers</h3>
-          <span class="cs-meta">— para todo —</span>
+          <h3 data-en="stickers">stickers</h3>
+          <span class="cs-meta" data-en="— for everything —">— para todo —</span>
         </header>
         <div class="catalog-grid cat-color-2">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>pliego kiss-cut</h4>
-            <p>Muchos stickers en una hoja, cada uno cortado al borde para despegar.</p>
-            <span class="cc-format">imprimible · A4 / A5</span>
+            <h4 data-en="kiss-cut sheet">pliego kiss-cut</h4>
+            <p data-en="Many stickers on a single sheet, each cut to the edge for easy peeling.">Muchos stickers en una hoja, cada uno cortado al borde para despegar.</p>
+            <span class="cc-format" data-en="printable · A4 / A5">imprimible · A4 / A5</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>troquelados sueltos</h4>
-            <p>Sticker individual con forma libre — el corte sigue el dibujo.</p>
-            <span class="cc-format">imprimible · 1 / pack</span>
+            <h4 data-en="loose die-cuts">troquelados sueltos</h4>
+            <p data-en="Individual stickers in free shape — the cut follows the drawing.">Sticker individual con forma libre — el corte sigue el dibujo.</p>
+            <span class="cc-format" data-en="printable · 1 / pack">imprimible · 1 / pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>holográficos</h4>
-            <p>Efectos sirena, glitter, irisado. Para que tu marca brille (literal).</p>
-            <span class="cc-format">imprimible · vinilo holo</span>
+            <h4 data-en="holographic">holográficos</h4>
+            <p data-en="Mermaid, glitter, iridescent effects. So your brand literally shines.">Efectos sirena, glitter, irisado. Para que tu marca brille (literal).</p>
+            <span class="cc-format" data-en="printable · holo vinyl">imprimible · vinilo holo</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>transparentes</h4>
-            <p>Sin fondo blanco — quedan integrados al packaging o cuaderno.</p>
-            <span class="cc-format">imprimible · vinilo trans</span>
+            <h4 data-en="transparent">transparentes</h4>
+            <p data-en="No white background — they blend into your packaging or notebook.">Sin fondo blanco — quedan integrados al packaging o cuaderno.</p>
+            <span class="cc-format" data-en="printable · clear vinyl">imprimible · vinilo trans</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>packs journaling</h4>
-            <p>Sets temáticos para bullet journal, agenda o scrapbooking.</p>
-            <span class="cc-format">pack · PDF</span>
+            <h4 data-en="journaling packs">packs journaling</h4>
+            <p data-en="Themed sets for bullet journals, planners or scrapbooking.">Sets temáticos para bullet journal, agenda o scrapbooking.</p>
+            <span class="cc-format" data-en="pack · PDF">pack · PDF</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>sellos digitales</h4>
-            <p>PNG transparente alta resolución, para usar en redes o impresión.</p>
-            <span class="cc-format">digital · PNG 300dpi</span>
+            <h4 data-en="digital stamps">sellos digitales</h4>
+            <p data-en="High-resolution transparent PNG, for social media or print.">PNG transparente alta resolución, para usar en redes o impresión.</p>
+            <span class="cc-format" data-en="digital · PNG 300dpi">digital · PNG 300dpi</span>
           </article>
         </div>
       </section>
@@ -343,45 +349,45 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">03 ✦</span>
-          <h3>marca &amp; cierre de pedido</h3>
-          <span class="cs-meta">— para tu emprendimiento —</span>
+          <h3 data-en="brand &amp; order packaging">marca &amp; cierre de pedido</h3>
+          <span class="cs-meta" data-en="— for your small business —">— para tu emprendimiento —</span>
         </header>
         <div class="catalog-grid cat-color-3">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>tags "gracias por tu compra"</h4>
-            <p>Circulares o rectangulares, con tu logo y mensaje. Quedan en el paquete.</p>
-            <span class="cc-format">imprimible · cartulina 250g</span>
+            <h4 data-en="&quot;thanks for your order&quot; tags">tags "gracias por tu compra"</h4>
+            <p data-en="Round or rectangular, with your logo and message. Stay in the package.">Circulares o rectangulares, con tu logo y mensaje. Quedan en el paquete.</p>
+            <span class="cc-format" data-en="printable · 250gsm cardstock">imprimible · cartulina 250g</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>mini cards "hecho con amor"</h4>
-            <p>Tarjetitas dobladas formato 90 x 55 mm para sumar al envío.</p>
-            <span class="cc-format">imprimible · 90x55</span>
+            <h4 data-en="&quot;made with love&quot; mini cards">mini cards "hecho con amor"</h4>
+            <p data-en="Folded mini cards 90 x 55 mm to add to your shipping.">Tarjetitas dobladas formato 90 x 55 mm para sumar al envío.</p>
+            <span class="cc-format" data-en="printable · 90x55">imprimible · 90x55</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>etiquetas de cuidado</h4>
-            <p>Composición, lavado, materiales — para tus productos textiles o cosmética.</p>
-            <span class="cc-format">imprimible · custom</span>
+            <h4 data-en="care labels">etiquetas de cuidado</h4>
+            <p data-en="Composition, washing, materials — for your textiles or cosmetics.">Composición, lavado, materiales — para tus productos textiles o cosmética.</p>
+            <span class="cc-format" data-en="printable · custom">imprimible · custom</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>stickers cierre de bolsa</h4>
-            <p>Para precintar el envoltorio con tu logo, en forma redonda o cuadrada.</p>
-            <span class="cc-format">imprimible · vinilo</span>
+            <h4 data-en="bag seal stickers">stickers cierre de bolsa</h4>
+            <p data-en="To seal your packaging with your logo, round or square.">Para precintar el envoltorio con tu logo, en forma redonda o cuadrada.</p>
+            <span class="cc-format" data-en="printable · vinyl">imprimible · vinilo</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>tarjetas personales</h4>
-            <p>Tarjeta de visita, formato 85 x 55 mm, doble cara con tu identidad.</p>
-            <span class="cc-format">imprimible · 85x55</span>
+            <h4 data-en="business cards">tarjetas personales</h4>
+            <p data-en="Business card, 85 x 55 mm, double-sided with your identity.">Tarjeta de visita, formato 85 x 55 mm, doble cara con tu identidad.</p>
+            <span class="cc-format" data-en="printable · 85x55">imprimible · 85x55</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>pack identidad mini</h4>
-            <p>Logo + 3 piezas básicas para arrancar tu marca con coherencia visual.</p>
-            <span class="cc-format">pack · PDF + PNG</span>
+            <h4 data-en="mini identity pack">pack identidad mini</h4>
+            <p data-en="Logo + 3 basic pieces to launch your brand with visual coherence.">Logo + 3 piezas básicas para arrancar tu marca con coherencia visual.</p>
+            <span class="cc-format" data-en="pack · PDF + PNG">pack · PDF + PNG</span>
           </article>
         </div>
       </section>
@@ -390,57 +396,57 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">04 ★</span>
-          <h3>eventos &amp; celebraciones</h3>
-          <span class="cs-meta">— cumples, bodas, baby shower —</span>
+          <h3 data-en="events &amp; celebrations">eventos &amp; celebraciones</h3>
+          <span class="cs-meta" data-en="— birthdays, weddings, baby shower —">— cumples, bodas, baby shower —</span>
         </header>
         <div class="catalog-grid cat-color-4">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>invitaciones</h4>
-            <p>Digitales (para WhatsApp/email) o imprimibles formato 10 x 15 cm.</p>
-            <span class="cc-format">digital o imprimible</span>
+            <h4 data-en="invitations">invitaciones</h4>
+            <p data-en="Digital (for WhatsApp/email) or printable 10 x 15 cm format.">Digitales (para WhatsApp/email) o imprimibles formato 10 x 15 cm.</p>
+            <span class="cc-format" data-en="digital or printable">digital o imprimible</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>save the date</h4>
-            <p>Anticipo elegante para casamientos, formato cuadrado para redes.</p>
-            <span class="cc-format">digital · cuadrado</span>
+            <h4 data-en="save the date">save the date</h4>
+            <p data-en="Elegant preview for weddings, square format for social media.">Anticipo elegante para casamientos, formato cuadrado para redes.</p>
+            <span class="cc-format" data-en="digital · square">digital · cuadrado</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>kit de cumpleaños temático</h4>
-            <p>Invi + bandera + toppers torta + etiquetas dulces + cartel candy bar.</p>
-            <span class="cc-format">pack · PDF imprimible</span>
+            <h4 data-en="themed birthday kit">kit de cumpleaños temático</h4>
+            <p data-en="Invitation + banner + cake toppers + candy labels + candy bar sign.">Invi + bandera + toppers torta + etiquetas dulces + cartel candy bar.</p>
+            <span class="cc-format" data-en="pack · printable PDF">pack · PDF imprimible</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>baby shower</h4>
-            <p>Invitación, juegos imprimibles, tarjetas para souvenirs y carteles.</p>
-            <span class="cc-format">pack · PDF imprimible</span>
+            <h4 data-en="baby shower">baby shower</h4>
+            <p data-en="Invitation, printable games, souvenir tags and signs.">Invitación, juegos imprimibles, tarjetas para souvenirs y carteles.</p>
+            <span class="cc-format" data-en="pack · printable PDF">pack · PDF imprimible</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>comuniones &amp; bautismos</h4>
-            <p>Invitaciones, recordatorios y estampitas. Estilo clásico o moderno.</p>
-            <span class="cc-format">imprimible · 10x15</span>
+            <h4 data-en="first communions &amp; baptisms">comuniones &amp; bautismos</h4>
+            <p data-en="Invitations, keepsakes and prayer cards. Classic or modern style.">Invitaciones, recordatorios y estampitas. Estilo clásico o moderno.</p>
+            <span class="cc-format" data-en="printable · 10x15">imprimible · 10x15</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>menús &amp; marca-sitios</h4>
-            <p>Para mesa de evento: menú impreso, marca-platos y carteles de mesa.</p>
-            <span class="cc-format">imprimible · A5 / A4</span>
+            <h4 data-en="menus &amp; place cards">menús &amp; marca-sitios</h4>
+            <p data-en="For your event table: printed menu, plate markers and table signs.">Para mesa de evento: menú impreso, marca-platos y carteles de mesa.</p>
+            <span class="cc-format" data-en="printable · A5 / A4">imprimible · A5 / A4</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">g</span>
-            <h4>toppers torta &amp; cupcakes</h4>
-            <p>Cartelitos para clavar en la torta o cupcakes, troquelados a forma.</p>
-            <span class="cc-format">imprimible · cartulina</span>
+            <h4 data-en="cake &amp; cupcake toppers">toppers torta &amp; cupcakes</h4>
+            <p data-en="Little signs to stick into cake or cupcakes, die-cut to shape.">Cartelitos para clavar en la torta o cupcakes, troquelados a forma.</p>
+            <span class="cc-format" data-en="printable · cardstock">imprimible · cartulina</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">h</span>
-            <h4>etiquetas para botellas</h4>
-            <p>Para vino, agua, mini-licores. Personalizadas con nombres o fecha.</p>
-            <span class="cc-format">imprimible · vinilo</span>
+            <h4 data-en="bottle labels">etiquetas para botellas</h4>
+            <p data-en="For wine, water, mini-liquors. Personalised with names or date.">Para vino, agua, mini-licores. Personalizadas con nombres o fecha.</p>
+            <span class="cc-format" data-en="printable · vinyl">imprimible · vinilo</span>
           </article>
         </div>
       </section>
@@ -449,45 +455,45 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">05 ✿</span>
-          <h3>fechas especiales</h3>
-          <span class="cs-meta">— el calendario en papelería —</span>
+          <h3 data-en="special dates">fechas especiales</h3>
+          <span class="cs-meta" data-en="— the calendar in stationery —">— el calendario en papelería —</span>
         </header>
         <div class="catalog-grid cat-color-5">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>pascuas</h4>
-            <p>Tags para huevos, bolsas decoradas, stickers conejito y cartelitos.</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="easter">pascuas</h4>
+            <p data-en="Egg tags, decorated bags, bunny stickers and little signs.">Tags para huevos, bolsas decoradas, stickers conejito y cartelitos.</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>día de la madre</h4>
-            <p>Tarjeta + vale personalizado + etiqueta de regalo a juego.</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="mother's day">día de la madre</h4>
+            <p data-en="Card + personalised voucher + matching gift tag.">Tarjeta + vale personalizado + etiqueta de regalo a juego.</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>día del padre</h4>
-            <p>Tarjeta + vale (carpintería, asado, pesca — vos elegís el tema).</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="father's day">día del padre</h4>
+            <p data-en="Card + voucher (woodworking, BBQ, fishing — you pick the theme).">Tarjeta + vale (carpintería, asado, pesca — vos elegís el tema).</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>navidad &amp; reyes</h4>
-            <p>Etiquetas de regalo, tarjetas, cartas a Reyes y a Papá Noel.</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="christmas &amp; kings">navidad &amp; reyes</h4>
+            <p data-en="Gift tags, cards, letters to the Kings and Santa.">Etiquetas de regalo, tarjetas, cartas a Reyes y a Papá Noel.</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>san valentín</h4>
-            <p>Tarjeta + sticker + tag — para regalo, pareja o amiga.</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="valentine's">san valentín</h4>
+            <p data-en="Card + sticker + tag — for a gift, partner or friend.">Tarjeta + sticker + tag — para regalo, pareja o amiga.</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>fiestas mallorquinas</h4>
-            <p>Sant Joan, Sant Antoni, ferias locales — diseños a medida con onda isleña.</p>
-            <span class="cc-format">a medida · pack</span>
+            <h4 data-en="Mallorcan festivals">fiestas mallorquinas</h4>
+            <p data-en="Sant Joan, Sant Antoni, local fairs — custom designs with island vibe.">Sant Joan, Sant Antoni, ferias locales — diseños a medida con onda isleña.</p>
+            <span class="cc-format" data-en="custom · pack">a medida · pack</span>
           </article>
         </div>
       </section>
@@ -496,45 +502,45 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">06 ✱</span>
-          <h3>diseño digital</h3>
-          <span class="cs-meta">— para tu marca online —</span>
+          <h3 data-en="digital design">diseño digital</h3>
+          <span class="cs-meta" data-en="— for your online brand —">— para tu marca online —</span>
         </header>
         <div class="catalog-grid cat-color-6">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>plantillas de stories</h4>
-            <p>Pack de 10 stories editables en Canva o Photoshop, con tu paleta.</p>
-            <span class="cc-format">digital · editable</span>
+            <h4 data-en="story templates">plantillas de stories</h4>
+            <p data-en="Pack of 10 editable stories in Canva or Photoshop, with your palette.">Pack de 10 stories editables en Canva o Photoshop, con tu paleta.</p>
+            <span class="cc-format" data-en="digital · editable">digital · editable</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>grilla de feed x9</h4>
-            <p>9 posts coordinados para tu feed de Instagram — composición planificada.</p>
-            <span class="cc-format">digital · PNG/JPG</span>
+            <h4 data-en="x9 feed grid">grilla de feed x9</h4>
+            <p data-en="9 coordinated posts for your Instagram feed — planned composition.">9 posts coordinados para tu feed de Instagram — composición planificada.</p>
+            <span class="cc-format" data-en="digital · PNG/JPG">digital · PNG/JPG</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>highlights covers</h4>
-            <p>Set de 6 portadas para destacadas de Instagram, con íconos a juego.</p>
-            <span class="cc-format">digital · PNG</span>
+            <h4 data-en="highlight covers">highlights covers</h4>
+            <p data-en="Set of 6 Instagram highlight covers with matching icons.">Set de 6 portadas para destacadas de Instagram, con íconos a juego.</p>
+            <span class="cc-format" data-en="digital · PNG">digital · PNG</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>email signature</h4>
-            <p>Firma con tu logo y datos para que tus mails se vean profesionales.</p>
-            <span class="cc-format">digital · HTML</span>
+            <h4 data-en="email signature">email signature</h4>
+            <p data-en="Signature with your logo and details so your emails look professional.">Firma con tu logo y datos para que tus mails se vean profesionales.</p>
+            <span class="cc-format" data-en="digital · HTML">digital · HTML</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>wallpaper de marca</h4>
-            <p>Fondo de pantalla para celu, tablet o escritorio con tu identidad.</p>
-            <span class="cc-format">digital · PNG</span>
+            <h4 data-en="brand wallpaper">wallpaper de marca</h4>
+            <p data-en="Wallpaper for phone, tablet or desktop with your identity.">Fondo de pantalla para celu, tablet o escritorio con tu identidad.</p>
+            <span class="cc-format" data-en="digital · PNG">digital · PNG</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>branding mini</h4>
-            <p>Logo + paleta + tipografías + mini manual de uso. Para arrancar bien.</p>
-            <span class="cc-format">pack · PDF + PNG</span>
+            <h4 data-en="mini branding">branding mini</h4>
+            <p data-en="Logo + palette + fonts + mini usage guide. To start off right.">Logo + paleta + tipografías + mini manual de uso. Para arrancar bien.</p>
+            <span class="cc-format" data-en="pack · PDF + PNG">pack · PDF + PNG</span>
           </article>
         </div>
       </section>
@@ -543,57 +549,57 @@
       <section class="catalog-section">
         <header class="catalog-section-head">
           <span class="cs-num">07 ☼</span>
-          <h3>mallorca &amp; turismo</h3>
-          <span class="cs-meta">— diseños para la isla —</span>
+          <h3 data-en="mallorca &amp; tourism">mallorca &amp; turismo</h3>
+          <span class="cs-meta" data-en="— designs for the island —">— diseños para la isla —</span>
         </header>
         <div class="catalog-grid cat-color-1">
           <article class="catalog-card">
             <span class="cc-ico">a</span>
-            <h4>welcome card huéspedes</h4>
-            <p>Tarjeta de bienvenida para tu Airbnb o casa rural. WiFi, normas, contacto, datos prácticos.</p>
-            <span class="cc-format">imprimible · A5</span>
+            <h4 data-en="guest welcome card">welcome card huéspedes</h4>
+            <p data-en="Welcome card for your Airbnb or rural house. WiFi, rules, contact, practical info.">Tarjeta de bienvenida para tu Airbnb o casa rural. WiFi, normas, contacto, datos prácticos.</p>
+            <span class="cc-format" data-en="printable · A5">imprimible · A5</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">b</span>
-            <h4>mapa ilustrado del pueblo</h4>
-            <p>Mapa custom de tu zona con los rincones favoritos — para huéspedes o como regalo de marca.</p>
-            <span class="cc-format">imprimible · A3 / digital</span>
+            <h4 data-en="illustrated village map">mapa ilustrado del pueblo</h4>
+            <p data-en="Custom map of your area with favourite spots — for guests or as a brand gift.">Mapa custom de tu zona con los rincones favoritos — para huéspedes o como regalo de marca.</p>
+            <span class="cc-format" data-en="printable · A3 / digital">imprimible · A3 / digital</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">c</span>
-            <h4>set de postales handmade</h4>
-            <p>Postales ilustradas de Mallorca para vender en tu tienda, regalar o sumar al packaging.</p>
-            <span class="cc-format">imprimible · 10x15</span>
+            <h4 data-en="handmade postcard set">set de postales handmade</h4>
+            <p data-en="Illustrated Mallorca postcards to sell in your shop, gift or add to packaging.">Postales ilustradas de Mallorca para vender en tu tienda, regalar o sumar al packaging.</p>
+            <span class="cc-format" data-en="printable · 10x15">imprimible · 10x15</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">d</span>
-            <h4>guest book personalizado</h4>
-            <p>Cuaderno de visitas con tu marca para que tus huéspedes te dejen su mensaje.</p>
-            <span class="cc-format">imprimible · A5</span>
+            <h4 data-en="personalised guest book">guest book personalizado</h4>
+            <p data-en="Branded guest book so your visitors can leave you their message.">Cuaderno de visitas con tu marca para que tus huéspedes te dejen su mensaje.</p>
+            <span class="cc-format" data-en="printable · A5">imprimible · A5</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">e</span>
-            <h4>recommendation cards</h4>
-            <p>"Dónde comer", "qué playas", "dónde tomar algo" — set personalizado para tus huéspedes.</p>
-            <span class="cc-format">pack · imprimible</span>
+            <h4 data-en="recommendation cards">recommendation cards</h4>
+            <p data-en="&quot;Where to eat&quot;, &quot;which beaches&quot;, &quot;where to have a drink&quot; — custom set for your guests.">"Dónde comer", "qué playas", "dónde tomar algo" — set personalizado para tus huéspedes.</p>
+            <span class="cc-format" data-en="pack · printable">pack · imprimible</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">f</span>
-            <h4>invitación boda bilingüe</h4>
-            <p>Bodas destino: invitaciones en español + catalán + inglés. Coherente, elegante, para invitados internacionales.</p>
-            <span class="cc-format">imprimible o digital</span>
+            <h4 data-en="bilingual wedding invitation">invitación boda bilingüe</h4>
+            <p data-en="Destination weddings: invitations in Spanish + Catalan + English. Consistent, elegant, for international guests.">Bodas destino: invitaciones en español + catalán + inglés. Coherente, elegante, para invitados internacionales.</p>
+            <span class="cc-format" data-en="printable or digital">imprimible o digital</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">g</span>
-            <h4>papelería para mercados</h4>
-            <p>Etiquetas de precio, banner para tu puesto, tarjetas y signage para feria artesanal.</p>
-            <span class="cc-format">imprimible · pack</span>
+            <h4 data-en="market stall stationery">papelería para mercados</h4>
+            <p data-en="Price tags, banner for your stall, cards and signage for craft fairs.">Etiquetas de precio, banner para tu puesto, tarjetas y signage para feria artesanal.</p>
+            <span class="cc-format" data-en="printable · pack">imprimible · pack</span>
           </article>
           <article class="catalog-card">
             <span class="cc-ico">h</span>
-            <h4>menús para restaurantes</h4>
-            <p>Cartas, pizarras, mantelitos individuales y QR-menús para cafés y restaurantes pequeños.</p>
-            <span class="cc-format">imprimible · A4 / A5</span>
+            <h4 data-en="restaurant menus">menús para restaurantes</h4>
+            <p data-en="Menus, chalkboards, individual placemats and QR-menus for small cafés and restaurants.">Cartas, pizarras, mantelitos individuales y QR-menús para cafés y restaurantes pequeños.</p>
+            <span class="cc-format" data-en="printable · A4 / A5">imprimible · A4 / A5</span>
           </article>
         </div>
       </section>
@@ -604,14 +610,14 @@
           <circle cx="12" cy="12" r="4" fill="none" stroke="currentColor" stroke-width="1.5"/>
           <circle cx="17.5" cy="6.5" r="1.2" fill="currentColor"/>
         </svg>
-        ver todo en mi Insta
+        <span data-en="see everything on my Insta">ver todo en mi Insta</span>
       </a>
     </div>
 
     <section class="nextpage">
-      <p class="nextpage-eyebrow">— y atrás de cada pieza, —</p>
+      <p class="nextpage-eyebrow" data-en="— and behind every piece, —">— y atrás de cada pieza, —</p>
       <a href="sobre.html" class="nextpage-link">
-        un poquito sobre mí <span class="arrow">→</span>
+        <span data-en="a little about me">un poquito sobre mí</span> <span class="arrow">→</span>
       </a>
     </section>
 
@@ -628,25 +634,25 @@
           <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 3"/>
           <text x="40" y="50" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="currentColor">LD</text>
         </svg>
-        <p><em>Lulitas Designs</em><br/><span>papelería con alma · argentina en Mallorca ♡</span></p>
+        <p><em>Lulitas Designs</em><br/><span data-en="stationery with soul · Argentinian in Mallorca ♡">papelería con alma · argentina en Mallorca ♡</span></p>
       </div>
       <nav class="footer-nav">
-        <a href="servicios.html">qué hago</a>
-        <a href="proceso.html">cómo trabajo</a>
-        <a href="portfolio.html">cuaderno</a>
-        <a href="sobre.html">quién soy</a>
-        <a href="contacto.html">escribime</a>
+        <a href="servicios.html" data-en="what I do">qué hago</a>
+        <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+        <a href="portfolio.html" data-en="notebook">cuaderno</a>
+        <a href="sobre.html" data-en="about me">quién soy</a>
+        <a href="contacto.html" data-en="say hello">escribime</a>
       </nav>
       <div class="footer-meta">
         <p>© <span id="year">2026</span> · Lulitas Designs</p>
-        <p>diseños 100% originales — todos los derechos a su autora</p>
-        <p class="footer-sig">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
+        <p data-en="100% original designs — all rights reserved by the artist">diseños 100% originales — todos los derechos a su autora</p>
+        <p class="footer-sig" data-en="site lovingly built by <a href=&quot;https://www.vantia.digital/&quot; rel=&quot;noopener noreferrer&quot; class=&quot;vantia-link&quot;>Vantia Digital</a>">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
       </div>
     </div>
   </footer>
 
   <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
-  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido" data-en-aria-label="View my order">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -657,41 +663,42 @@
 
   <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido" data-en-aria-label="Your order">
     <header class="cart-head">
-      <h2>tu <em>pedido</em> ♡</h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+      <h2 data-en="your <em>order</em> ♡">tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido" data-en-aria-label="Close order">×</button>
     </header>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span class="cart-total-label">total</span>
+        <span class="cart-total-label" data-en="total">total</span>
         <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
       </div>
       <form class="cart-form" id="cartForm" novalidate>
-        <label>tu nombre
-          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        <label data-en="your name">tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" data-en-placeholder="what's your name?" />
         </label>
-        <label>cómo te contacto
-          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        <label data-en="how to reach you">cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" data-en-placeholder="whatsapp, email or instagram" />
         </label>
-        <label>algo más
-          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        <label data-en="anything else">algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..." data-en-placeholder="dates, quantities, ideas..."></textarea>
         </label>
         <button type="submit" class="cart-submit" id="cartSubmit" disabled>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
           </svg>
-          enviar pedido por email
+          <span data-en="send order by email">enviar pedido por email</span>
         </button>
-        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
-        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+        <button type="button" class="cart-clear" id="cartClear" data-en="clear order">vaciar pedido</button>
+        <p class="cart-note" data-en="I'll open your mail client with everything ready.<br/>You review &amp; send ♡">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
       </form>
     </div>
   </aside>
 
+  <script src="../assets/js/i18n.js?v=1" defer></script>
   <script src="../assets/js/main.js?v=3" defer></script>
   <script src="../assets/js/animations.js?v=3" defer></script>
-  <script src="../assets/js/cart.js?v=1" defer></script>
+  <script src="../assets/js/cart.js?v=2" defer></script>
 </body>
 </html>

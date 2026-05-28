@@ -32,7 +32,7 @@
         <text x="32" y="32" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#6b3a2a">LD</text>
       </svg>
     </div>
-    <span class="loader-text">un momentito ♡</span>
+    <span class="loader-text" data-en="one sec ♡">un momentito ♡</span>
   </div>
 
   <header class="nav" id="nav">
@@ -49,30 +49,36 @@
       </span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="pages/servicios.html">qué hago</a>
-      <a href="pages/proceso.html">cómo trabajo</a>
-      <a href="pages/portfolio.html">cuaderno</a>
-      <a href="pages/sobre.html">quién soy</a>
-      <a href="pages/contacto.html" class="nav-link-cta">escribime →</a>
+    <nav class="nav-links" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+      <a href="pages/servicios.html" data-en="what I do">qué hago</a>
+      <a href="pages/proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="pages/portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="pages/sobre.html" data-en="about me">quién soy</a>
+      <a href="pages/contacto.html" class="nav-link-cta" data-en="say hello →">escribime →</a>
     </nav>
 
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-end">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-en-aria-label="Language">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" data-en-aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="pages/servicios.html">qué hago</a>
-      <a href="pages/proceso.html">cómo trabajo</a>
-      <a href="pages/portfolio.html">cuaderno</a>
-      <a href="pages/sobre.html">quién soy</a>
-      <a href="pages/contacto.html">escribime ♡</a>
+      <a href="pages/servicios.html" data-en="what I do">qué hago</a>
+      <a href="pages/proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="pages/portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="pages/sobre.html" data-en="about me">quién soy</a>
+      <a href="pages/contacto.html" data-en="say hello ♡">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
-      <a href="mailto:lulitasdesigns@gmail.com">email</a>
+      <a href="mailto:lulitasdesigns@gmail.com" data-en="email">email</a>
     </div>
   </div>
 
@@ -135,20 +141,20 @@
               <path d="M230 90s-6-4-6-8c0-2 1.5-4 4-4 1 0 2 .8 2 1.2.5-.4 1.5-1.2 2.5-1.2 2.5 0 4 2 4 4 0 4-6 8-6 8z" fill="#cfe7d7"/>
             </svg>
           </div>
-          <span class="polaroid-caption">soy <em>Patricia</em> ✿</span>
+          <span class="polaroid-caption" data-en="I'm <em>Patricia</em> ✿">soy <em>Patricia</em> ✿</span>
         </div>
 
         <div class="hero-letter">
           <p class="hero-hi">
-            <span class="hi-hand">¡hola, hola!</span>
+            <span class="hi-hand" data-en="hi there!">¡hola, hola!</span>
             <span class="hi-icon">✿</span>
           </p>
-          <h1 class="hero-title">
+          <h1 class="hero-title" data-en="I design <em>stationery</em><br/>with <span class=&quot;hero-underline&quot;>soul</span>,<br/><span class=&quot;script&quot;>just for you.</span>">
             Diseño <em>papelería</em><br/>
             con <span class="hero-underline">alma</span>,<br/>
             <span class="script">para vos.</span>
           </h1>
-          <p class="hero-text">
+          <p class="hero-text" data-en="School labels, stickers, tags, invitations, island weddings or stationery for your brand — all <strong>custom-made</strong> from Mallorca, with mate alongside and Argentine soul.">
             Etiquetas escolares, stickers, tags, invitaciones,
             bodas en la isla o papelería para tu marca — todo
             <strong>hecho a medida</strong> desde Mallorca,
@@ -161,9 +167,9 @@
                 <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                 <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" transform="scale(.85) translate(2,2)"/>
               </svg>
-              ver productos &amp; armar pedido
+              <span data-en="browse products &amp; start order">ver productos &amp; armar pedido</span>
             </a>
-            <a href="pages/contacto.html" class="btn btn-secondary btn-big">
+            <a href="pages/contacto.html" class="btn btn-secondary btn-big" data-en="let's talk">
               hablar conmigo
             </a>
           </div>
@@ -210,49 +216,49 @@
     <!-- ============================================================ -->
     <section class="home-index">
       <header class="home-index-head">
-        <p class="eyebrow-script">— el índice del cuaderno —</p>
-        <h2>pasá las <em>hojas</em>:</h2>
+        <p class="eyebrow-script" data-en="— notebook index —">— el índice del cuaderno —</p>
+        <h2 data-en="flip through the <em>pages</em>:">pasá las <em>hojas</em>:</h2>
       </header>
 
       <div class="index-grid">
         <a href="pages/servicios.html" class="index-card">
           <span class="ic-sticker" style="--c:#cfe7d7">✏︎</span>
           <span class="ic-num">01</span>
-          <h3>qué hago</h3>
-          <p>Etiquetas, stickers, tags, papelería de eventos, bodas en Mallorca, casas rurales y todo lo que se te ocurra a medida.</p>
-          <span class="ic-go">leer <em>→</em></span>
+          <h3 data-en="what I do">qué hago</h3>
+          <p data-en="Labels, stickers, tags, event stationery, weddings in Mallorca, rural houses and anything else you can dream up.">Etiquetas, stickers, tags, papelería de eventos, bodas en Mallorca, casas rurales y todo lo que se te ocurra a medida.</p>
+          <span class="ic-go" data-en="read <em>→</em>">leer <em>→</em></span>
         </a>
 
         <a href="pages/proceso.html" class="index-card">
           <span class="ic-sticker" style="--c:#f5dba0">✿</span>
           <span class="ic-num">02</span>
-          <h3>cómo trabajo</h3>
-          <p>Cuatro pasitos simples, sin vueltas raras, sin "cargo extra por cambio". Todo por WhatsApp o email.</p>
-          <span class="ic-go">leer <em>→</em></span>
+          <h3 data-en="how I work">cómo trabajo</h3>
+          <p data-en="Four simple steps, no fuss, no &quot;extra charge per revision&quot;. All by WhatsApp or email.">Cuatro pasitos simples, sin vueltas raras, sin "cargo extra por cambio". Todo por WhatsApp o email.</p>
+          <span class="ic-go" data-en="read <em>→</em>">leer <em>→</em></span>
         </a>
 
         <a href="pages/portfolio.html" class="index-card">
           <span class="ic-sticker" style="--c:#f5c5c5">♡</span>
           <span class="ic-num">03</span>
-          <h3>cuaderno</h3>
-          <p>Muestras de cada línea — etiquetas, stickers, tags, papelería estacional, bodas, Mallorca &amp; turismo y kits digitales.</p>
-          <span class="ic-go">leer <em>→</em></span>
+          <h3 data-en="notebook">cuaderno</h3>
+          <p data-en="Samples from each line — labels, stickers, tags, seasonal stationery, weddings, Mallorca &amp; tourism, and digital kits.">Muestras de cada línea — etiquetas, stickers, tags, papelería estacional, bodas, Mallorca &amp; turismo y kits digitales.</p>
+          <span class="ic-go" data-en="read <em>→</em>">leer <em>→</em></span>
         </a>
 
         <a href="pages/sobre.html" class="index-card">
           <span class="ic-sticker" style="--c:#ddd0e5">✦</span>
           <span class="ic-num">04</span>
-          <h3>quién soy</h3>
-          <p>Una carta cortita: cómo llegué de Argentina a Mallorca y por qué cada pedido es distinto.</p>
-          <span class="ic-go">leer <em>→</em></span>
+          <h3 data-en="about me">quién soy</h3>
+          <p data-en="A short letter: how I got from Argentina to Mallorca and why every order is unique.">Una carta cortita: cómo llegué de Argentina a Mallorca y por qué cada pedido es distinto.</p>
+          <span class="ic-go" data-en="read <em>→</em>">leer <em>→</em></span>
         </a>
 
         <a href="pages/contacto.html" class="index-card">
           <span class="ic-sticker" style="--c:#e8807a">★</span>
           <span class="ic-num">05</span>
-          <h3>escribime</h3>
-          <p>Email, Instagram, Linktree. Todos los caminos para empezar a charlar tu próximo proyecto.</p>
-          <span class="ic-go">leer <em>→</em></span>
+          <h3 data-en="say hello">escribime</h3>
+          <p data-en="Email, Instagram, Linktree. Every way to start chatting about your next project.">Email, Instagram, Linktree. Todos los caminos para empezar a charlar tu próximo proyecto.</p>
+          <span class="ic-go" data-en="read <em>→</em>">leer <em>→</em></span>
         </a>
       </div>
     </section>
@@ -273,28 +279,28 @@
         </svg>
         <p>
           <em>Lulitas Designs</em><br/>
-          <span>papelería con alma · argentina en Mallorca ♡</span>
+          <span data-en="stationery with soul · Argentinian in Mallorca ♡">papelería con alma · argentina en Mallorca ♡</span>
         </p>
       </div>
 
       <nav class="footer-nav">
-        <a href="pages/servicios.html">qué hago</a>
-        <a href="pages/proceso.html">cómo trabajo</a>
-        <a href="pages/portfolio.html">cuaderno</a>
-        <a href="pages/sobre.html">quién soy</a>
-        <a href="pages/contacto.html">escribime</a>
+        <a href="pages/servicios.html" data-en="what I do">qué hago</a>
+        <a href="pages/proceso.html" data-en="how I work">cómo trabajo</a>
+        <a href="pages/portfolio.html" data-en="notebook">cuaderno</a>
+        <a href="pages/sobre.html" data-en="about me">quién soy</a>
+        <a href="pages/contacto.html" data-en="say hello">escribime</a>
       </nav>
 
       <div class="footer-meta">
         <p>© <span id="year">2026</span> · Lulitas Designs</p>
-        <p>diseños 100% originales — todos los derechos a su autora</p>
-        <p class="footer-sig">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
+        <p data-en="100% original designs — all rights reserved by the artist">diseños 100% originales — todos los derechos a su autora</p>
+        <p class="footer-sig" data-en="site lovingly built by <a href=&quot;https://www.vantia.digital/&quot; rel=&quot;noopener noreferrer&quot; class=&quot;vantia-link&quot;>Vantia Digital</a>">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
       </div>
     </div>
   </footer>
 
   <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
-  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido" data-en-aria-label="View my order">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -305,41 +311,42 @@
 
   <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido" data-en-aria-label="Your order">
     <header class="cart-head">
-      <h2>tu <em>pedido</em> ♡</h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+      <h2 data-en="your <em>order</em> ♡">tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido" data-en-aria-label="Close order">×</button>
     </header>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span class="cart-total-label">total</span>
+        <span class="cart-total-label" data-en="total">total</span>
         <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
       </div>
       <form class="cart-form" id="cartForm" novalidate>
-        <label>tu nombre
-          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        <label data-en="your name">tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" data-en-placeholder="what's your name?" />
         </label>
-        <label>cómo te contacto
-          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        <label data-en="how to reach you">cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" data-en-placeholder="whatsapp, email or instagram" />
         </label>
-        <label>algo más
-          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        <label data-en="anything else">algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..." data-en-placeholder="dates, quantities, ideas..."></textarea>
         </label>
         <button type="submit" class="cart-submit" id="cartSubmit" disabled>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
           </svg>
-          enviar pedido por email
+          <span data-en="send order by email">enviar pedido por email</span>
         </button>
-        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
-        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+        <button type="button" class="cart-clear" id="cartClear" data-en="clear order">vaciar pedido</button>
+        <p class="cart-note" data-en="I'll open your mail client with everything ready.<br/>You review &amp; send ♡">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
       </form>
     </div>
   </aside>
 
+  <script src="assets/js/i18n.js?v=1" defer></script>
   <script src="assets/js/main.js?v=3" defer></script>
   <script src="assets/js/animations.js?v=3" defer></script>
-  <script src="assets/js/cart.js?v=1" defer></script>
+  <script src="assets/js/cart.js?v=2" defer></script>
 </body>
 </html>

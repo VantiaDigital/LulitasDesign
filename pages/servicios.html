@@ -23,7 +23,7 @@
         <text x="32" y="32" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#6b3a2a">LD</text>
       </svg>
     </div>
-    <span class="loader-text">un momentito ♡</span>
+    <span class="loader-text" data-en="one sec ♡">un momentito ♡</span>
   </div>
 
   <header class="nav" id="nav">
@@ -40,30 +40,36 @@
       </span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html" class="nav-link-cta">escribime →</a>
+    <nav class="nav-links" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" class="nav-link-cta" data-en="say hello →">escribime →</a>
     </nav>
 
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-end">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-en-aria-label="Language">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" data-en-aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html">escribime ♡</a>
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" data-en="say hello ♡">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
-      <a href="mailto:lulitasdesigns@gmail.com">email</a>
+      <a href="mailto:lulitasdesigns@gmail.com" data-en="email">email</a>
     </div>
   </div>
 
@@ -83,12 +89,12 @@
       <svg class="ph-doodle ph-doodle-2" viewBox="0 0 30 30" aria-hidden="true">
         <path d="M15 26s-11-7-11-15c0-4 3-7 7-7 2.5 0 4 2 4 2s1.5-2 4-2c4 0 7 3 7 7 0 8-11 15-11 15z" fill="currentColor"/>
       </svg>
-      <p class="ph-eyebrow">— qué hago —</p>
-      <h1 class="ph-title">
+      <p class="ph-eyebrow" data-en="— what I do —">— qué hago —</p>
+      <h1 class="ph-title" data-en="a little of <em>each thing</em>,<br/>a lot <span class=&quot;hl&quot;>of you</span>.">
         un poquito de <em>cada cosa</em>,<br/>
         mucho <span class="hl">de vos</span>.
       </h1>
-      <p class="ph-sub">
+      <p class="ph-sub" data-en="I work in any format — printable (print-ready PDF) or digital (for your Insta, decks, etc.). From Mallorca I also design for seaside weddings, rural houses and local festivals ♡">
         Trabajo en cualquier formato — imprimible (PDF listo para imprenta) o
         digital (para tu Insta, presentaciones, etc.). Desde Mallorca también
         diseño para bodas frente al mar, casas rurales y fiestas patronales ♡
@@ -96,14 +102,14 @@
     </section>
 
     <!-- Banner: cómo funciona el pedido -->
-    <section class="order-banner" aria-label="Cómo funciona el pedido">
-      <p class="order-banner-title">✿ <em>cómo armar tu pedido</em> ✿</p>
+    <section class="order-banner" aria-label="Cómo funciona el pedido" data-en-aria-label="How orders work">
+      <p class="order-banner-title" data-en="✿ <em>how to build your order</em> ✿">✿ <em>cómo armar tu pedido</em> ✿</p>
       <div class="order-banner-steps">
-        <span class="order-banner-step"><span class="step-num">1</span> agregás los productos que te interesan</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>1</span> add the products you like"><span class="step-num">1</span> agregás los productos que te interesan</span>
         <span class="order-banner-arrow" aria-hidden="true">→</span>
-        <span class="order-banner-step"><span class="step-num">2</span> abrís el mail con todo el detalle armado</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>2</span> open the mail with everything ready"><span class="step-num">2</span> abrís el mail con todo el detalle armado</span>
         <span class="order-banner-arrow" aria-hidden="true">→</span>
-        <span class="order-banner-step"><span class="step-num">3</span> te respondo con tu presupuesto ♡</span>
+        <span class="order-banner-step" data-en="<span class=&quot;step-num&quot;>3</span> I reply with your quote ♡"><span class="step-num">3</span> te respondo con tu presupuesto ♡</span>
       </div>
     </section>
 
@@ -113,82 +119,82 @@
         <article class="tag-card tag-1">
           <span class="washi washi-pink" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#cfe7d7">✏︎</span>
-          <h3>etiquetas escolares</h3>
-          <p>Para cuadernos, viandas, lápices, mochilas. Con el nombre del peque + diseño favorito.</p>
+          <h3 data-en="school labels">etiquetas escolares</h3>
+          <p data-en="For notebooks, lunchboxes, pencils, backpacks. With the kid's name + their favourite design.">Para cuadernos, viandas, lápices, mochilas. Con el nombre del peque + diseño favorito.</p>
           <ul class="tag-list">
-            <li>cuadernos</li><li>viandas</li><li>útiles</li>
+            <li data-en="notebooks">cuadernos</li><li data-en="lunchboxes">viandas</li><li data-en="supplies">útiles</li>
           </ul>
         </article>
 
         <article class="tag-card tag-2">
           <span class="washi washi-butter" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#f5c5c5">♡</span>
-          <h3>stickers a medida</h3>
-          <p>Pliegos en cualquier forma y tamaño. Kiss-cut, troquelados, holográficos. Ideales para regalos.</p>
+          <h3 data-en="custom stickers">stickers a medida</h3>
+          <p data-en="Sheets in any shape and size. Kiss-cut, die-cut, holographic. Ideal as gifts.">Pliegos en cualquier forma y tamaño. Kiss-cut, troquelados, holográficos. Ideales para regalos.</p>
           <ul class="tag-list">
-            <li>kiss-cut</li><li>troquelados</li><li>holo</li>
+            <li>kiss-cut</li><li data-en="die-cut">troquelados</li><li>holo</li>
           </ul>
-          <span class="badge-mini">más pedido</span>
+          <span class="badge-mini" data-en="most ordered">más pedido</span>
         </article>
 
         <article class="tag-card tag-3">
           <span class="washi washi-mint" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#f5dba0">✿</span>
-          <h3>tags y cierres</h3>
-          <p>"Gracias por tu compra", "Hecho con amor", "Feliz día". Para que tu marca cierre con onda.</p>
+          <h3 data-en="tags &amp; packaging">tags y cierres</h3>
+          <p data-en="&quot;Thanks for your order&quot;, &quot;Made with love&quot;, &quot;Happy day&quot;. So your brand wraps things up nicely.">"Gracias por tu compra", "Hecho con amor", "Feliz día". Para que tu marca cierre con onda.</p>
           <ul class="tag-list">
-            <li>gracias</li><li>hecho con amor</li><li>feliz día</li>
+            <li data-en="thanks">gracias</li><li data-en="made with love">hecho con amor</li><li data-en="happy day">feliz día</li>
           </ul>
         </article>
 
         <article class="tag-card tag-4">
           <span class="washi washi-pink" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#ddd0e5">✦</span>
-          <h3>eventos &amp; celebraciones</h3>
-          <p>Invitaciones, kits de cumple, candy bar, baby shower, comuniones y bautismos — pieza por pieza, coherente y bonita.</p>
+          <h3 data-en="events &amp; celebrations">eventos &amp; celebraciones</h3>
+          <p data-en="Invitations, birthday kits, candy bar, baby shower, first communions and baptisms — piece by piece, consistent and beautiful.">Invitaciones, kits de cumple, candy bar, baby shower, comuniones y bautismos — pieza por pieza, coherente y bonita.</p>
           <ul class="tag-list">
-            <li>cumples</li><li>baby shower</li><li>comuniones</li><li>bautismos</li>
+            <li data-en="birthdays">cumples</li><li>baby shower</li><li data-en="communions">comuniones</li><li data-en="baptisms">bautismos</li>
           </ul>
         </article>
 
         <article class="tag-card tag-1">
           <span class="washi washi-mint" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#f0a8a8">❀</span>
-          <h3>bodas en Mallorca</h3>
-          <p>Bodas destino frente al mar: invitaciones bilingües (es / ca / en), save the date, menús, marca-sitios y kit completo.</p>
+          <h3 data-en="weddings in Mallorca">bodas en Mallorca</h3>
+          <p data-en="Destination weddings by the sea: bilingual invitations (es / ca / en), save the date, menus, place cards and full kit.">Bodas destino frente al mar: invitaciones bilingües (es / ca / en), save the date, menús, marca-sitios y kit completo.</p>
           <ul class="tag-list">
-            <li>bilingüe</li><li>destination</li><li>full kit</li>
+            <li data-en="bilingual">bilingüe</li><li>destination</li><li>full kit</li>
           </ul>
-          <span class="badge-mini">nuevo</span>
+          <span class="badge-mini" data-en="new">nuevo</span>
         </article>
 
         <article class="tag-card tag-2">
           <span class="washi washi-butter" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#d4e6ef">⌂</span>
-          <h3>casas rurales &amp; Airbnb</h3>
-          <p>Welcome cards, guest book, recommendation cards y mapas ilustrados — para que tus huéspedes se sientan en casa.</p>
+          <h3 data-en="rural houses &amp; Airbnb">casas rurales &amp; Airbnb</h3>
+          <p data-en="Welcome cards, guest books, recommendation cards and illustrated maps — so your guests feel at home.">Welcome cards, guest book, recommendation cards y mapas ilustrados — para que tus huéspedes se sientan en casa.</p>
           <ul class="tag-list">
-            <li>welcome</li><li>mapas</li><li>guest book</li>
+            <li>welcome</li><li data-en="maps">mapas</li><li>guest book</li>
           </ul>
         </article>
 
         <article class="tag-card tag-5">
           <span class="washi washi-butter" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#d4e6ef">✱</span>
-          <h3>diseño digital</h3>
-          <p>Posts, historias, plantillas, kits visuales. Tu identidad consistente en cada red.</p>
+          <h3 data-en="digital design">diseño digital</h3>
+          <p data-en="Posts, stories, templates, visual kits. A consistent identity on every channel.">Posts, historias, plantillas, kits visuales. Tu identidad consistente en cada red.</p>
           <ul class="tag-list">
-            <li>instagram</li><li>plantillas</li><li>branding</li>
+            <li>instagram</li><li data-en="templates">plantillas</li><li>branding</li>
           </ul>
         </article>
 
         <article class="tag-card tag-6">
           <span class="washi washi-mint" aria-hidden="true"></span>
           <span class="tag-sticker" style="--c:#e8807a">★</span>
-          <h3>diseño a medida</h3>
-          <p>¿Algo distinto? Charlamos, lo pensamos juntas, lo hacemos. Sin límites, paso a paso.</p>
+          <h3 data-en="custom design">diseño a medida</h3>
+          <p data-en="Something different? We chat, think it through together and make it. No limits, step by step.">¿Algo distinto? Charlamos, lo pensamos juntas, lo hacemos. Sin límites, paso a paso.</p>
           <ul class="tag-list">
-            <li>idea propia</li><li>único</li><li>personal</li>
+            <li data-en="your idea">idea propia</li><li data-en="unique">único</li><li data-en="personal">personal</li>
           </ul>
         </article>
 
@@ -196,9 +202,9 @@
     </section>
 
     <section class="nextpage">
-      <p class="nextpage-eyebrow">— y después de elegir, —</p>
+      <p class="nextpage-eyebrow" data-en="— and once you've picked, —">— y después de elegir, —</p>
       <a href="proceso.html" class="nextpage-link">
-        ¿cómo trabajamos juntas? <span class="arrow">→</span>
+        <span data-en="how do we work together?">¿cómo trabajamos juntas?</span> <span class="arrow">→</span>
       </a>
     </section>
 
@@ -215,25 +221,25 @@
           <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 3"/>
           <text x="40" y="50" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="currentColor">LD</text>
         </svg>
-        <p><em>Lulitas Designs</em><br/><span>papelería con alma · argentina en Mallorca ♡</span></p>
+        <p><em>Lulitas Designs</em><br/><span data-en="stationery with soul · Argentinian in Mallorca ♡">papelería con alma · argentina en Mallorca ♡</span></p>
       </div>
       <nav class="footer-nav">
-        <a href="servicios.html">qué hago</a>
-        <a href="proceso.html">cómo trabajo</a>
-        <a href="portfolio.html">cuaderno</a>
-        <a href="sobre.html">quién soy</a>
-        <a href="contacto.html">escribime</a>
+        <a href="servicios.html" data-en="what I do">qué hago</a>
+        <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+        <a href="portfolio.html" data-en="notebook">cuaderno</a>
+        <a href="sobre.html" data-en="about me">quién soy</a>
+        <a href="contacto.html" data-en="say hello">escribime</a>
       </nav>
       <div class="footer-meta">
         <p>© <span id="year">2026</span> · Lulitas Designs</p>
-        <p>diseños 100% originales — todos los derechos a su autora</p>
-        <p class="footer-sig">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
+        <p data-en="100% original designs — all rights reserved by the artist">diseños 100% originales — todos los derechos a su autora</p>
+        <p class="footer-sig" data-en="site lovingly built by <a href=&quot;https://www.vantia.digital/&quot; rel=&quot;noopener noreferrer&quot; class=&quot;vantia-link&quot;>Vantia Digital</a>">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
       </div>
     </div>
   </footer>
 
   <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
-  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido" data-en-aria-label="View my order">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -244,41 +250,42 @@
 
   <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido" data-en-aria-label="Your order">
     <header class="cart-head">
-      <h2>tu <em>pedido</em> ♡</h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+      <h2 data-en="your <em>order</em> ♡">tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido" data-en-aria-label="Close order">×</button>
     </header>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span class="cart-total-label">total</span>
+        <span class="cart-total-label" data-en="total">total</span>
         <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
       </div>
       <form class="cart-form" id="cartForm" novalidate>
-        <label>tu nombre
-          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        <label data-en="your name">tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" data-en-placeholder="what's your name?" />
         </label>
-        <label>cómo te contacto
-          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        <label data-en="how to reach you">cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" data-en-placeholder="whatsapp, email or instagram" />
         </label>
-        <label>algo más
-          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        <label data-en="anything else">algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..." data-en-placeholder="dates, quantities, ideas..."></textarea>
         </label>
         <button type="submit" class="cart-submit" id="cartSubmit" disabled>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
           </svg>
-          enviar pedido por email
+          <span data-en="send order by email">enviar pedido por email</span>
         </button>
-        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
-        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+        <button type="button" class="cart-clear" id="cartClear" data-en="clear order">vaciar pedido</button>
+        <p class="cart-note" data-en="I'll open your mail client with everything ready.<br/>You review &amp; send ♡">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
       </form>
     </div>
   </aside>
 
+  <script src="../assets/js/i18n.js?v=1" defer></script>
   <script src="../assets/js/main.js?v=3" defer></script>
   <script src="../assets/js/animations.js?v=3" defer></script>
-  <script src="../assets/js/cart.js?v=1" defer></script>
+  <script src="../assets/js/cart.js?v=2" defer></script>
 </body>
 </html>

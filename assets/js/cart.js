@@ -1,14 +1,17 @@
 /* =============================================================
-   Lulitas Designs · cart.js
+   Lulitas Designs · cart.js  (bilingüe ES/EN)
    Carrito persistente (localStorage) + mailto con detalle.
-   Auto-enhance: cada .catalog-card y .tag-card recibe data-*
-   y un botón "+ agregar al pedido" sin tocar el HTML existente.
+   - Auto-enhance: cada .catalog-card y .tag-card recibe
+     data-product + un botón "+ agregar al pedido".
+   - Guarda ES + EN de cada producto, así el carrito se ve
+     en el idioma activo aunque el item se haya agregado en
+     el otro idioma.
    ============================================================= */
 
 (() => {
   'use strict';
 
-  const STORAGE_KEY = 'lulitas-cart-v1';
+  const STORAGE_KEY = 'lulitas-cart-v2';
   const EMAIL = 'lulitasdesigns@gmail.com';
 
   // ---------- Helpers ----------
@@ -24,8 +27,18 @@
     .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
     .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
 
+  const stripHtml = (html) => {
+    const div = document.createElement('div');
+    div.innerHTML = html || '';
+    return (div.textContent || '').trim();
+  };
+
   const $ = (sel, root = document) => root.querySelector(sel);
   const $$ = (sel, root = document) => Array.from(root.querySelectorAll(sel));
+
+  // ---------- Idioma actual ----------
+  const lang = () => (window.lulitasI18n?.current) || 'es';
+  const t = (es, en) => lang() === 'en' ? en : es;
 
   // ---------- Cart state ----------
   const readCart = () => {
@@ -49,7 +62,6 @@
     writeCart(cart);
     bumpFab();
   };
-
   const changeQty = (id, delta) => {
     const cart = readCart();
     const i = cart.findIndex(it => it.id === id);
@@ -58,34 +70,45 @@
     if (cart[i].qty <= 0) cart.splice(i, 1);
     writeCart(cart);
   };
-
   const removeItem = (id) => writeCart(readCart().filter(it => it.id !== id));
   const clearCart = () => writeCart([]);
   const totalQty = () => readCart().reduce((sum, it) => sum + it.qty, 0);
 
   // ---------- Auto-enhance cards ----------
+  const getDualText = (el, fallback = '') => {
+    if (!el) return { es: fallback, en: fallback };
+    const visible = stripHtml(el.dataset._es ?? el.innerHTML);
+    const enHtml = el.getAttribute('data-en');
+    const en = enHtml ? stripHtml(enHtml) : visible;
+    return { es: visible, en };
+  };
+
   const enhanceCard = (card) => {
     const heading = card.querySelector('h3, h4');
     if (!heading) return;
-    const name = heading.textContent.trim();
+    const name = getDualText(heading);
 
     let cat;
     if (card.classList.contains('catalog-card')) {
-      cat = card.closest('.catalog-section')
-            ?.querySelector('.catalog-section-head h3')
-            ?.textContent?.trim() || 'cuaderno';
+      const catHead = card.closest('.catalog-section')
+                        ?.querySelector('.catalog-section-head h3');
+      cat = getDualText(catHead, 'cuaderno');
     } else if (card.classList.contains('tag-card')) {
-      cat = 'servicios';
+      cat = { es: 'servicios', en: 'services' };
     } else return;
 
     const fmtEl = card.querySelector('.cc-format');
-    const format = fmtEl?.textContent?.trim() || '';
-    const id = `${slugify(cat)}--${slugify(name)}`;
+    const format = fmtEl ? getDualText(fmtEl) : { es: '', en: '' };
+
+    const id = `${slugify(cat.es)}--${slugify(name.es)}`;
 
     card.dataset.product = id;
-    card.dataset.name = name;
-    card.dataset.cat = cat;
-    if (format) card.dataset.format = format;
+    card.dataset.nameEs = name.es;
+    card.dataset.nameEn = name.en;
+    card.dataset.catEs = cat.es;
+    card.dataset.catEn = cat.en;
+    if (format.es) card.dataset.formatEs = format.es;
+    if (format.en) card.dataset.formatEn = format.en;
 
     if (card.querySelector('.btn-add')) return;
 
@@ -96,7 +119,7 @@
       <svg viewBox="0 0 24 24" aria-hidden="true">
         <path d="M12 5v14M5 12h14" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
       </svg>
-      <span>agregar al pedido</span>
+      <span data-en="add to order">agregar al pedido</span>
     `;
 
     if (card.classList.contains('catalog-card')) {
@@ -111,6 +134,9 @@
   };
 
   $$('.catalog-card, .tag-card').forEach(enhanceCard);
+
+  // Re-apply i18n on newly created elements (los <span data-en> de los btns)
+  if (window.lulitasI18n) window.lulitasI18n.apply(lang());
 
   // ---------- UI updaters ----------
   const updateCount = () => {
@@ -130,34 +156,48 @@
 
     const cart = readCart();
     const count = totalQty();
+    const currentLang = lang();
 
-    if (totalEl) totalEl.textContent = `${count} pieza${count === 1 ? '' : 's'}`;
+    if (totalEl) {
+      const word = currentLang === 'en'
+        ? `${count} piece${count === 1 ? '' : 's'}`
+        : `${count} pieza${count === 1 ? '' : 's'}`;
+      totalEl.textContent = word;
+    }
     if (submit) submit.disabled = cart.length === 0;
 
     if (cart.length === 0) {
       body.innerHTML = `
         <div class="cart-empty">
           <span class="cart-empty-icon" aria-hidden="true">✿</span>
-          <p>tu pedido está vacío —<br/>sumá productos desde<br/>servicios o el cuaderno ♡</p>
+          <p>${t(
+            'tu pedido está vacío —<br/>sumá productos desde<br/>servicios o el cuaderno ♡',
+            'your order is empty —<br/>add products from<br/>services or notebook ♡'
+          )}</p>
         </div>`;
       return;
     }
 
-    body.innerHTML = cart.map(it => `
-      <article class="cart-item" data-id="${escapeHtml(it.id)}">
-        <div class="cart-item-info">
-          <h4>${escapeHtml(it.name)}</h4>
-          <span class="cart-item-cat">${escapeHtml(it.category)}</span>
-          ${it.format ? `<span class="cart-item-format">· ${escapeHtml(it.format)}</span>` : ''}
-        </div>
-        <div class="cart-item-qty">
-          <button type="button" data-action="dec" aria-label="Restar uno">−</button>
-          <span>${it.qty}</span>
-          <button type="button" data-action="inc" aria-label="Sumar uno">+</button>
-        </div>
-        <button type="button" class="cart-item-remove" data-action="remove" aria-label="Quitar producto">×</button>
-      </article>
-    `).join('');
+    body.innerHTML = cart.map(it => {
+      const itName = currentLang === 'en' ? (it.nameEn || it.nameEs || it.name) : (it.nameEs || it.name);
+      const itCat  = currentLang === 'en' ? (it.catEn  || it.catEs  || it.category) : (it.catEs  || it.category);
+      const itFmt  = currentLang === 'en' ? (it.formatEn || it.formatEs || it.format) : (it.formatEs || it.format);
+      return `
+        <article class="cart-item" data-id="${escapeHtml(it.id)}">
+          <div class="cart-item-info">
+            <h4>${escapeHtml(itName || '')}</h4>
+            <span class="cart-item-cat">${escapeHtml(itCat || '')}</span>
+            ${itFmt ? `<span class="cart-item-format">· ${escapeHtml(itFmt)}</span>` : ''}
+          </div>
+          <div class="cart-item-qty">
+            <button type="button" data-action="dec" aria-label="${t('Restar uno','Subtract one')}">−</button>
+            <span>${it.qty}</span>
+            <button type="button" data-action="inc" aria-label="${t('Sumar uno','Add one')}">+</button>
+          </div>
+          <button type="button" class="cart-item-remove" data-action="remove" aria-label="${t('Quitar producto','Remove product')}">×</button>
+        </article>
+      `;
+    }).join('');
   };
 
   const updateUI = () => {
@@ -169,7 +209,6 @@
     const fab = $('#cartFab');
     if (!fab) return;
     fab.classList.remove('is-bumping');
-    // reflow para reiniciar la animación
     void fab.offsetWidth;
     fab.classList.add('is-bumping');
   };
@@ -200,31 +239,35 @@
 
   // ---------- Click delegation ----------
   document.addEventListener('click', e => {
-    // 1) Agregar al pedido
+    // Agregar al pedido
     const addBtn = e.target.closest('.btn-add');
     if (addBtn) {
       const card = addBtn.closest('[data-product]');
       if (!card) return;
       addItem({
         id: card.dataset.product,
-        name: card.dataset.name,
-        category: card.dataset.cat,
-        format: card.dataset.format || ''
+        nameEs: card.dataset.nameEs,
+        nameEn: card.dataset.nameEn,
+        catEs: card.dataset.catEs,
+        catEn: card.dataset.catEn,
+        formatEs: card.dataset.formatEs || '',
+        formatEn: card.dataset.formatEn || ''
       });
       const label = addBtn.querySelector('span');
       if (label) {
-        const original = label.textContent;
+        const originalEs = label.dataset._es ?? label.textContent;
+        const originalEn = label.getAttribute('data-en') || originalEs;
         addBtn.classList.add('is-added');
-        label.textContent = '✓ agregado';
+        label.textContent = t('✓ agregado', '✓ added');
         setTimeout(() => {
           addBtn.classList.remove('is-added');
-          label.textContent = original;
+          label.textContent = lang() === 'en' ? originalEn : originalEs;
         }, 1400);
       }
       return;
     }
 
-    // 2) Acciones dentro del cart drawer
+    // Cart actions
     const actionBtn = e.target.closest('[data-action]');
     if (actionBtn && actionBtn.closest('.cart-item')) {
       const itemEl = actionBtn.closest('.cart-item');
@@ -237,9 +280,9 @@
       return;
     }
 
-    // 3) Vaciar pedido
+    // Vaciar pedido
     if (e.target.closest('#cartClear')) {
-      if (totalQty() > 0 && confirm('¿Vaciar todo el pedido?')) clearCart();
+      if (totalQty() > 0 && confirm(t('¿Vaciar todo el pedido?', 'Clear the whole order?'))) clearCart();
       return;
     }
   });
@@ -252,37 +295,66 @@
     if (cart.length === 0) return;
 
     const fd = new FormData(form);
-    const name = (fd.get('name') || '').toString().trim() || '(no especificado)';
-    const contact = (fd.get('contact') || '').toString().trim() || '(no especificado)';
+    const name = (fd.get('name') || '').toString().trim() || t('(sin nombre)','(no name)');
+    const contact = (fd.get('contact') || '').toString().trim() || t('(no especificado)','(not specified)');
     const notes = (fd.get('notes') || '').toString().trim();
     const total = totalQty();
+    const currentLang = lang();
 
-    // Construir el cuerpo del email
     const sep = '─'.repeat(40);
-    let body = `¡Hola Patricia!\n\nQuiero pedir presupuesto por estos productos:\n\n${sep}\n\n`;
+    let body;
 
-    cart.forEach((it, i) => {
-      body += `${String(i + 1).padStart(2, '0')}. ${it.name}\n`;
-      body += `    categoría: ${it.category}\n`;
-      if (it.format) body += `    formato:   ${it.format}\n`;
-      body += `    cantidad:  ${it.qty}\n\n`;
-    });
-
-    body += `${sep}\n`;
-    body += `TOTAL: ${total} pieza${total === 1 ? '' : 's'} seleccionada${total === 1 ? '' : 's'}\n`;
-    body += `${sep}\n\n`;
-    body += `Mis datos:\n`;
-    body += `  · nombre:    ${name}\n`;
-    body += `  · contacto:  ${contact}\n`;
-    if (notes) {
-      body += `\nComentarios:\n${notes}\n`;
+    if (currentLang === 'en') {
+      body = `Hi Patricia!\n\nI'd like a quote for these products:\n\n${sep}\n\n`;
+      cart.forEach((it, i) => {
+        const nm = it.nameEn || it.nameEs || it.name || '';
+        const ct = it.catEn  || it.catEs  || it.category || '';
+        const fm = it.formatEn || it.formatEs || it.format || '';
+        body += `${String(i + 1).padStart(2, '0')}. ${nm}\n`;
+        body += `    category: ${ct}\n`;
+        if (fm) body += `    format:   ${fm}\n`;
+        body += `    quantity: ${it.qty}\n\n`;
+      });
+      body += `${sep}\n`;
+      body += `TOTAL: ${total} piece${total === 1 ? '' : 's'}\n`;
+      body += `${sep}\n\n`;
+      body += `My info:\n`;
+      body += `  · name:    ${name}\n`;
+      body += `  · contact: ${contact}\n`;
+      if (notes) body += `\nComments:\n${notes}\n`;
+      body += `\nThanks! ♡\n— sent from lulitas.designs`;
+    } else {
+      body = `¡Hola Patricia!\n\nQuiero pedir presupuesto por estos productos:\n\n${sep}\n\n`;
+      cart.forEach((it, i) => {
+        const nm = it.nameEs || it.name || '';
+        const ct = it.catEs  || it.category || '';
+        const fm = it.formatEs || it.format || '';
+        body += `${String(i + 1).padStart(2, '0')}. ${nm}\n`;
+        body += `    categoría: ${ct}\n`;
+        if (fm) body += `    formato:   ${fm}\n`;
+        body += `    cantidad:  ${it.qty}\n\n`;
+      });
+      body += `${sep}\n`;
+      body += `TOTAL: ${total} pieza${total === 1 ? '' : 's'} seleccionada${total === 1 ? '' : 's'}\n`;
+      body += `${sep}\n\n`;
+      body += `Mis datos:\n`;
+      body += `  · nombre:    ${name}\n`;
+      body += `  · contacto:  ${contact}\n`;
+      if (notes) body += `\nComentarios:\n${notes}\n`;
+      body += `\n¡Gracias! ♡\n— enviado desde lulitas.designs`;
     }
-    body += `\n¡Gracias! ♡\n— enviado desde lulitas.designs`;
 
-    const subject = `Nuevo pedido — ${total} pieza${total === 1 ? '' : 's'} de Lulitas Designs`;
+    const subject = currentLang === 'en'
+      ? `New order — ${total} piece${total === 1 ? '' : 's'} from Lulitas Designs`
+      : `Nuevo pedido — ${total} pieza${total === 1 ? '' : 's'} de Lulitas Designs`;
+
     const mailto = `mailto:${EMAIL}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-
     window.location.href = mailto;
+  });
+
+  // ---------- Re-render al cambiar idioma ----------
+  window.addEventListener('lulitas:lang', () => {
+    updateUI();
   });
 
   // ---------- Sincronizar entre pestañas ----------

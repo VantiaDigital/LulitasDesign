@@ -23,7 +23,7 @@
         <text x="32" y="32" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="14" fill="#6b3a2a">LD</text>
       </svg>
     </div>
-    <span class="loader-text">un momentito ♡</span>
+    <span class="loader-text" data-en="one sec ♡">un momentito ♡</span>
   </div>
 
   <header class="nav" id="nav">
@@ -40,30 +40,36 @@
       </span>
     </a>
 
-    <nav class="nav-links" aria-label="Navegación principal">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html" class="nav-link-cta">escribime →</a>
+    <nav class="nav-links" aria-label="Navegación principal" data-en-aria-label="Main navigation">
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" class="nav-link-cta" data-en="say hello →">escribime →</a>
     </nav>
 
-    <button class="nav-burger" id="navBurger" aria-label="Abrir menú" aria-expanded="false">
-      <span></span><span></span><span></span>
-    </button>
+    <div class="nav-end">
+      <div class="lang-toggle" role="group" aria-label="Idioma" data-en-aria-label="Language">
+        <button class="lang-btn is-active" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+      </div>
+      <button class="nav-burger" id="navBurger" aria-label="Abrir menú" data-en-aria-label="Open menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
   </header>
 
   <div class="drawer" id="drawer" aria-hidden="true">
     <nav class="drawer-links">
-      <a href="servicios.html">qué hago</a>
-      <a href="proceso.html">cómo trabajo</a>
-      <a href="portfolio.html">cuaderno</a>
-      <a href="sobre.html">quién soy</a>
-      <a href="contacto.html">escribime ♡</a>
+      <a href="servicios.html" data-en="what I do">qué hago</a>
+      <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+      <a href="portfolio.html" data-en="notebook">cuaderno</a>
+      <a href="sobre.html" data-en="about me">quién soy</a>
+      <a href="contacto.html" data-en="say hello ♡">escribime ♡</a>
     </nav>
     <div class="drawer-foot">
       <a href="https://www.instagram.com/lulitas.designs/" target="_blank" rel="noopener">@lulitas.designs</a>
-      <a href="mailto:lulitasdesigns@gmail.com">email</a>
+      <a href="mailto:lulitasdesigns@gmail.com" data-en="email">email</a>
     </div>
   </div>
 
@@ -78,12 +84,12 @@
       <svg class="ph-doodle ph-doodle-2" viewBox="0 0 80 40" aria-hidden="true">
         <path d="M2 20 Q12 4 22 20 Q32 36 42 20 Q52 4 62 20 Q72 36 78 20" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round"/>
       </svg>
-      <p class="ph-eyebrow">— cómo trabajamos —</p>
-      <h1 class="ph-title">
+      <p class="ph-eyebrow" data-en="— how we work —">— cómo trabajamos —</p>
+      <h1 class="ph-title" data-en="simple, no <em>weird detours</em>,<br/><span class=&quot;hl&quot;>and at your pace.</span>">
         simple, sin <em>vueltas raras</em>,<br/>
         <span class="hl">y a tu ritmo.</span>
       </h1>
-      <p class="ph-sub">
+      <p class="ph-sub" data-en="Here's exactly what it's like to work with me, from your first message to the moment you hold your piece in your hand.">
         Te cuento exactamente cómo es laburar conmigo, desde que me
         escribís por primera vez hasta que tenés tu pieza en la mano.
       </p>
@@ -101,8 +107,8 @@
               </svg>
             </span>
             <div>
-              <h3>charlamos tu idea</h3>
-              <p>Me escribís por donde quieras — Insta, email o Linktree. Te pregunto lo justo: qué necesitás, para cuándo, cuántas piezas, estilo que te gusta. Sin formularios eternos.</p>
+              <h3 data-en="we chat about your idea">charlamos tu idea</h3>
+              <p data-en="Reach out wherever — Insta, email or Linktree. I'll ask just the essentials: what you need, when, how many pieces, the style you like. No endless forms.">Me escribís por donde quieras — Insta, email o Linktree. Te pregunto lo justo: qué necesitás, para cuándo, cuántas piezas, estilo que te gusta. Sin formularios eternos.</p>
             </div>
             <span class="check-num">01</span>
           </li>
@@ -115,8 +121,8 @@
               </svg>
             </span>
             <div>
-              <h3>diseño tu pieza</h3>
-              <p>Trabajo la propuesta en modo Lulitas: colores, tipografías y detalles pensados para vos, no de plantilla. Te paso una preview por WhatsApp para que veas cómo está quedando.</p>
+              <h3 data-en="I design your piece">diseño tu pieza</h3>
+              <p data-en="I work the proposal in Lulitas mode: colours, fonts and details thought just for you, not from a template. I send you a preview by WhatsApp so you can see how it's coming along.">Trabajo la propuesta en modo Lulitas: colores, tipografías y detalles pensados para vos, no de plantilla. Te paso una preview por WhatsApp para que veas cómo está quedando.</p>
             </div>
             <span class="check-num">02</span>
           </li>
@@ -129,8 +135,8 @@
               </svg>
             </span>
             <div>
-              <h3>ajustamos lo que haga falta</h3>
-              <p>Sin apuro, sin "cargo extra por cambio". Si querés mover, agrandar, cambiar color o agregar algo: lo hacemos. Cuantas vueltas necesites, hasta que te enamore.</p>
+              <h3 data-en="we adjust whatever you need">ajustamos lo que haga falta</h3>
+              <p data-en="No rush, no &quot;extra charge per revision&quot;. Want to move, resize, recolour, add something: we do it. As many rounds as you need, until you love it.">Sin apuro, sin "cargo extra por cambio". Si querés mover, agrandar, cambiar color o agregar algo: lo hacemos. Cuantas vueltas necesites, hasta que te enamore.</p>
             </div>
             <span class="check-num">03</span>
           </li>
@@ -143,50 +149,50 @@
               </svg>
             </span>
             <div>
-              <h3>te llega listo</h3>
-              <p>PDF imprimible — con sangrías, márgenes y resolución que la imprenta pide — o archivo digital en el formato que necesites. Te explico cómo imprimirlo si nunca lo hiciste.</p>
+              <h3 data-en="it arrives ready">te llega listo</h3>
+              <p data-en="Printable PDF — with bleeds, margins and the resolution the print shop needs — or digital file in whatever format you need. I'll walk you through printing if you've never done it.">PDF imprimible — con sangrías, márgenes y resolución que la imprenta pide — o archivo digital en el formato que necesites. Te explico cómo imprimirlo si nunca lo hiciste.</p>
             </div>
             <span class="check-num">04</span>
           </li>
         </ol>
 
         <p class="notebook-foot">
-          <span>todo el proceso por <strong>WhatsApp</strong> o <strong>email</strong> ♡</span>
+          <span data-en="the whole process by <strong>WhatsApp</strong> or <strong>email</strong> ♡">todo el proceso por <strong>WhatsApp</strong> o <strong>email</strong> ♡</span>
         </p>
       </div>
     </section>
 
     <!-- Why mini-bloque -->
     <section class="why">
-      <h2 class="why-title">cositas que <em>me importan</em>:</h2>
+      <h2 class="why-title" data-en="little things <em>I care about</em>:">cositas que <em>me importan</em>:</h2>
       <div class="why-wall">
         <div class="why-sticker w-1">
           <span class="ws-emoji">✿</span>
-          <h3>hecho con tiempo</h3>
-          <p>Cada pieza pasa por mis manos. Nada de plantillas reusadas.</p>
+          <h3 data-en="made with time">hecho con tiempo</h3>
+          <p data-en="Every piece passes through my hands. No reused templates.">Cada pieza pasa por mis manos. Nada de plantillas reusadas.</p>
         </div>
         <div class="why-sticker w-2">
           <span class="ws-emoji">♡</span>
-          <h3>cambios sin culpa</h3>
-          <p>Si algo no te cierra, lo ajustamos. Cuantas veces haga falta, sin extras.</p>
+          <h3 data-en="changes, no guilt">cambios sin culpa</h3>
+          <p data-en="If something feels off, we adjust it. As many times as needed, no extras.">Si algo no te cierra, lo ajustamos. Cuantas veces haga falta, sin extras.</p>
         </div>
         <div class="why-sticker w-3">
           <span class="ws-emoji">✦</span>
-          <h3>listo para imprenta</h3>
-          <p>PDF con sangrías, márgenes y calidad para que la imprenta diga "qué hermoso".</p>
+          <h3 data-en="print-ready">listo para imprenta</h3>
+          <p data-en="PDFs with bleeds, margins and quality so the print shop says &quot;how lovely&quot;.">PDF con sangrías, márgenes y calidad para que la imprenta diga "qué hermoso".</p>
         </div>
         <div class="why-sticker w-4">
           <span class="ws-emoji">★</span>
-          <h3>trato cercano</h3>
-          <p>Te respondo yo, no un equipo. La charla es directa, simple y cálida.</p>
+          <h3 data-en="warm and direct">trato cercano</h3>
+          <p data-en="You hear from me, not a team. The chat is direct, simple and warm.">Te respondo yo, no un equipo. La charla es directa, simple y cálida.</p>
         </div>
       </div>
     </section>
 
     <section class="nextpage">
-      <p class="nextpage-eyebrow">— ahora sí, mirá —</p>
+      <p class="nextpage-eyebrow" data-en="— now, take a look at —">— ahora sí, mirá —</p>
       <a href="portfolio.html" class="nextpage-link">
-        mi cuaderno de diseños <span class="arrow">→</span>
+        <span data-en="my design notebook">mi cuaderno de diseños</span> <span class="arrow">→</span>
       </a>
     </section>
 
@@ -203,25 +209,25 @@
           <circle cx="40" cy="40" r="36" fill="none" stroke="currentColor" stroke-width="1" stroke-dasharray="1 3"/>
           <text x="40" y="50" text-anchor="middle" font-family="Fraunces, serif" font-style="italic" font-size="30" fill="currentColor">LD</text>
         </svg>
-        <p><em>Lulitas Designs</em><br/><span>papelería con alma · argentina en Mallorca ♡</span></p>
+        <p><em>Lulitas Designs</em><br/><span data-en="stationery with soul · Argentinian in Mallorca ♡">papelería con alma · argentina en Mallorca ♡</span></p>
       </div>
       <nav class="footer-nav">
-        <a href="servicios.html">qué hago</a>
-        <a href="proceso.html">cómo trabajo</a>
-        <a href="portfolio.html">cuaderno</a>
-        <a href="sobre.html">quién soy</a>
-        <a href="contacto.html">escribime</a>
+        <a href="servicios.html" data-en="what I do">qué hago</a>
+        <a href="proceso.html" data-en="how I work">cómo trabajo</a>
+        <a href="portfolio.html" data-en="notebook">cuaderno</a>
+        <a href="sobre.html" data-en="about me">quién soy</a>
+        <a href="contacto.html" data-en="say hello">escribime</a>
       </nav>
       <div class="footer-meta">
         <p>© <span id="year">2026</span> · Lulitas Designs</p>
-        <p>diseños 100% originales — todos los derechos a su autora</p>
-        <p class="footer-sig">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
+        <p data-en="100% original designs — all rights reserved by the artist">diseños 100% originales — todos los derechos a su autora</p>
+        <p class="footer-sig" data-en="site lovingly built by <a href=&quot;https://www.vantia.digital/&quot; rel=&quot;noopener noreferrer&quot; class=&quot;vantia-link&quot;>Vantia Digital</a>">sitio hecho con cariño por <a href="https://www.vantia.digital/" rel="noopener noreferrer" class="vantia-link">Vantia Digital</a></p>
       </div>
     </div>
   </footer>
 
   <!-- ===== Carrito: FAB flotante + overlay + drawer ===== -->
-  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido">
+  <button class="cart-fab" id="cartFab" type="button" aria-label="Ver mi pedido" data-en-aria-label="View my order">
     <svg viewBox="0 0 32 32" aria-hidden="true">
       <path d="M9 11 L9 8 Q9 4 16 4 Q23 4 23 8 L23 11" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
       <path d="M6 11 L26 11 L24 28 L8 28 Z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
@@ -232,41 +238,42 @@
 
   <div class="cart-overlay" id="cartOverlay" aria-hidden="true"></div>
 
-  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido">
+  <aside class="cart-drawer" id="cartDrawer" aria-hidden="true" aria-label="Tu pedido" data-en-aria-label="Your order">
     <header class="cart-head">
-      <h2>tu <em>pedido</em> ♡</h2>
-      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido">×</button>
+      <h2 data-en="your <em>order</em> ♡">tu <em>pedido</em> ♡</h2>
+      <button class="cart-close" id="cartClose" type="button" aria-label="Cerrar pedido" data-en-aria-label="Close order">×</button>
     </header>
     <div class="cart-body" id="cartBody"></div>
     <div class="cart-foot">
       <div class="cart-total">
-        <span class="cart-total-label">total</span>
+        <span class="cart-total-label" data-en="total">total</span>
         <span class="cart-total-value" id="cartTotalValue">0 piezas</span>
       </div>
       <form class="cart-form" id="cartForm" novalidate>
-        <label>tu nombre
-          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" />
+        <label data-en="your name">tu nombre
+          <input type="text" name="name" required autocomplete="name" placeholder="¿cómo te llamás?" data-en-placeholder="what's your name?" />
         </label>
-        <label>cómo te contacto
-          <input type="text" name="contact" placeholder="whatsapp, email o instagram" />
+        <label data-en="how to reach you">cómo te contacto
+          <input type="text" name="contact" placeholder="whatsapp, email o instagram" data-en-placeholder="whatsapp, email or instagram" />
         </label>
-        <label>algo más
-          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..."></textarea>
+        <label data-en="anything else">algo más
+          <textarea name="notes" placeholder="contame fechas, cantidades, ideas..." data-en-placeholder="dates, quantities, ideas..."></textarea>
         </label>
         <button type="submit" class="cart-submit" id="cartSubmit" disabled>
           <svg viewBox="0 0 24 24" aria-hidden="true">
             <path d="M3 6h18v12H3z M3 6l9 7 9-7" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
           </svg>
-          enviar pedido por email
+          <span data-en="send order by email">enviar pedido por email</span>
         </button>
-        <button type="button" class="cart-clear" id="cartClear">vaciar pedido</button>
-        <p class="cart-note">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
+        <button type="button" class="cart-clear" id="cartClear" data-en="clear order">vaciar pedido</button>
+        <p class="cart-note" data-en="I'll open your mail client with everything ready.<br/>You review &amp; send ♡">Te abro el cliente de mail con todo armado.<br/>Vos revisás y mandás ♡</p>
       </form>
     </div>
   </aside>
 
+  <script src="../assets/js/i18n.js?v=1" defer></script>
   <script src="../assets/js/main.js?v=3" defer></script>
   <script src="../assets/js/animations.js?v=3" defer></script>
-  <script src="../assets/js/cart.js?v=1" defer></script>
+  <script src="../assets/js/cart.js?v=2" defer></script>
 </body>
 </html>
